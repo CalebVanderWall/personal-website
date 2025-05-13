@@ -4,16 +4,20 @@ title: "Replace this with an interesting title"
 
 ## Motivation and Context
 
+Over the past 3 years I've become interested in fantasy football. This has lead me to explore football statistics in order to better predict the performance of players and teams. I've also grown up with two sisters who have been die hard Taylor Swift fans their whole lives. Though these two facts about my life seem to be unrelated however, If you've watched a Kansis city chiefs game in the past two years or heard any news at all about Taylor Swift, you would know that they are unfortunately very related. The world was set ablaze in September 2023 when Taylor Swift and Travis Kelce announced they were in a relationship. Ticket and Travis Kelce Jersey revenue skyrocketed as the market was introduced to millions of Swifties trying to secure the latest Taylor Swift clout so they could where it to her next show. As their high profile relationship continues, I am curious to see how this relationship would effect the Kansas City Chiefs Performance.
+
 ```{r}
 #| label: do this first
 #| echo: false
 #| message: false
 
 # change this to the location of your Quarto file containing your project; then delete this comment
-here::i_am("Final Project.qmd")
+here::i_am("Fnal Project.qmd")
 ```
 
 ## Main Objective
+
+How does Taylor Swift's attendance at Kansas City Chiefs games effect the offensive performance.
 
 ## Packages Used In This Analysis
 
@@ -37,7 +41,7 @@ library(dplyr)
 ```
 
 | Package | Use |
-|----|----|
+|--------------------------------|----------------------------------------|
 | [here](https://github.com/jennybc/here_here) | to easily load and save data |
 | [readr](https://readr.tidyverse.org/) | to import the CSV file data |
 | [dplyr](https://dplyr.tidyverse.org/) | to massage and summarize data |
@@ -46,19 +50,496 @@ library(dplyr)
 
 ## Data Description
 
+The data I will be using is Kansas City Chiefs season performance statistics form https://www.pro-football-reference.com/ from 2013 to 2024. This data is collected from the staff of Pro Football Reference. It is collected in order for fans to better understand th teams they love and support. This site is the leading football statistical reference site, and is sited by many others. I am constricting data to 2013 - 2024 since 2013 is when Patrick Mahomes was drafted onto the Kansas City Chiefs ans started a new era of their franchise. Some key variable sin this data is: Points Scored, Points Allowed, Total Yards, Total Passing Yards, Totaly Rushing Yards and Touchdowns.
+
 ```{r}
 #| label: import data
 #| warning: false
-
+kcc_g_16 <- read_csv("C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_16.txt", show_col_types = FALSE)
+kcc_g_24 <- read_csv("C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_24.txt", show_col_types = FALSE)
+kcc_g_23 <- read_csv("C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_23.txt", show_col_types = FALSE)
+kcc_g_22 <- read_csv("C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_22.txt", show_col_types = FALSE)
+kcc_g_21 <- read_csv("C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_21.txt", show_col_types = FALSE)
+kcc_g_20 <- read_csv("C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_20.txt", show_col_types = FALSE)
+kcc_g_19 <- read_csv("C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_19.txt", show_col_types = FALSE)
+kcc_g_18 <- read_csv("C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_18.txt", show_col_types = FALSE)
+kcc_g_17 <- read_csv("C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_17.txt", show_col_types = FALSE)
+kcc_g_16 <- read_csv("C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_16.txt", show_col_types = FALSE)
+kcc_g_15 <- read_csv("C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_15.txt", show_col_types = FALSE)
+kcc_g_14 <- read_csv("C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_14.txt", show_col_types = FALSE)
+kcc_g_13 <- read_csv("C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_13.txt", show_col_types = FALSE)
 ```
 
 ### Data Limitations
 
+When choosing a response variable based on this data set is a little tricky. The natural two to select are touchdowns and Points scored. Although using these variables as an offensive indicator of success is misleading since they do not take into account who the opposing team is. Scoring a massive amount of points against the New York giants (worst in league) may be less impressive than and average amount of points scored against the Detroit Lions (best in League). A better indicator of offensive success is how a team did reltive to their predicted score. This data does not have this predicted score data we need.
+
+This data also does not indicate whether Taylor Swift attended the game or not. We will have to find this info and input it in the data in oour data wrangling phase.
+
+The data frames also have unnamed colums and rows with there actual names being observations, We will need to convert the column and row names to the righ ones.
+
 ## Data Wrangling (Optional Section)
+
+```{r}
+file_paths <- list.files(path = "C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data", 
+                         pattern = "kcc_g_.*\\.txt$", full.names = TRUE)
+
+new_col_names <- c("Week", "Day", "Date", "Time", "Boxscore", "Outcome", "OT", "Rec", 
+                   "Location", "Ppp", "PtS", "PtA", "FirstD", "TotYd", "PassY", "RushY", 
+                   "TO", "FirstD_Alwd", "TotYd_Alwd", "PassY_Alwd", "RushY_Alwd", 
+                   "TO_Alwd", "ExOff", "ExDef", "ExSpec")
+
+kcc_data <- lapply(file_paths, function(file) {
+  df <- read_csv(file, skip = 1, show_col_types = FALSE)   # Read the file
+  colnames(df) <- new_col_names  # Rename columns
+  year_suffix <- str_extract(basename(file), "\\d{2}")
+  full_year <- as.integer(paste0("20", year_suffix))  # Convert to 4-digit year
+
+  df <- df |> filter(Week != "Playoffs") #Removes playoff row
+  df <- df |> filter(Ppp != "Bye Week") #removes bie week row
+  df <- df |> mutate(Taylor_Attend = "no") #Adds attendance collumn
+  df <- df |>  mutate(Year = full_year) |>  # Add Year column
+    
+    relocate(Year, .before = Week)  # Move Year column before Week
+  df <- df |> mutate(
+    Date = paste(Date, full_year),  # Combine Date and Year
+    Date = as.Date(Date, format = "% %d %Y")  # Convert to Date format (e.g., "September 13 2013")
+  )
+
+  df <- df |> mutate(
+    Week = case_when(  # Replace playoff names with sequential week numbers
+        Week == "Wild Card" ~ "18",
+        Week == "Division" ~ "19",
+        Week == "Conf. Champ." ~ "20",
+        Week == "SuperBowl" ~ "21",
+        TRUE ~ as.character(Week)  # Keep regular weeks unchanged
+      )
+  )
+  return(df)  # Return the modified dataframe
+})
+
+names(kcc_data) <- gsub(".*/|\\.txt$", "", file_paths)  # Remove path and .txt extension
+
+# Assign each dataframe to a separate variable
+for (name in names(kcc_data)) {
+  assign(name, kcc_data[[name]])
+}
+
+Taylor_Attend23 <- c("no", "no", "yes", "yes", "no", "yes", "yes", "no", "no", "no", "no", "yes", "yes", "yes", "yes", "yes", "no", "yes", "yes", "yes", "yes")
+Taylor_Attend24 <- c("yes", "yes", "no", "no", "yes", "no", "no", "yes", "yes", "no", "no", "yes", "no", "no", "yes", "no", "no", "yes", "yes", "yes")
+
+kcc_g_23 <- kcc_g_23 |> mutate(Taylor_Attend = Taylor_Attend23)
+kcc_g_24 <- kcc_g_24 |> mutate(Taylor_Attend = Taylor_Attend24)
+```
 
 ## Exploratory Data Analysis
 
+We will split the data inot a training and test set. We will train the data with 2013 - 2022 seasons. This is because 2013 marks the year Patrick MMMahomes was drafted onto the chiefs and the start of the dramatic improvement of Kansas City over the next 10 years. We end the training data at 2022 since Travis and Taylor's relationship began in 2023. We will also split the data into the years of the Chiefs dynasty 2019 - 2024.
+
+```{r}
+years_to_include <- list(kcc_g_13, kcc_g_14, kcc_g_15, kcc_g_16, kcc_g_17, kcc_g_18, kcc_g_19, kcc_g_20, kcc_g_21, kcc_g_22)
+
+kcc_g_train <- bind_rows(years_to_include)
+
+kcc_g_test <- bind_rows(kcc_g_23, kcc_g_24)
+
+kcc_g_all <- bind_rows(kcc_g_train, kcc_g_test)
+
+kcc_g_dyn <- bind_rows(kcc_g_19, kcc_g_20, kcc_g_21, kcc_g_22, kcc_g_23, kcc_g_24)
+
+kcc_g_taylor <- filter(kcc_g_test, Taylor_Attend == "yes")
+
+kcc_g_taylorless <- filter(kcc_g_test, Taylor_Attend == "no")
+```
+
+We are choosing our response variable to be points scored instead of touchdowns. Points scored is a better indicator of success for an offense because it includes field goals. Field goals show a minor success in an offense. Here is the distribution of points scored per game from 2013 - 2024 seasons
+
+```{r}
+ggplot(kcc_g_all, aes(x = as.factor(Year), y = PtS, fill = as.factor(Year))) +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(title = "Points Scored Per Game Distribution by Year",
+       x = "Year", 
+       y = "Points Scored Per Game (PtS)")
+```
+
+The following is a box plot displaying the distributions of points scored by the Chiefs when Taylor was attending verses when she was not attending from 2013 - 2024
+
+```{r}
+kcc_g_all |> group_by(Taylor_Attend) |> 
+  summarize(
+    num_total = n(),
+    num_missing = sum(is.na(PtS)),
+    min = min(PtS, na.rm = TRUE),
+    Q1 = quantile(PtS, 0.25, na.rm = TRUE),
+    median = median(PtS, na.rm = TRUE),
+    Q3 = quantile(PtS, 0.75, na.rm = TRUE),
+    max = max(PtS, na.rm = TRUE),
+    mean = mean(PtS, na.rm = TRUE),
+    sd = sd(PtS, na.rm = TRUE)
+  )
+ggplot(data = kcc_g_all, aes(x = Taylor_Attend, y = PtS, fill = Taylor_Attend)) + 
+  geom_boxplot() +
+  geom_jitter(width = 0.2, alpha = 0.5) +  # Avoids overlapping points
+  coord_flip() +
+  theme_minimal() +
+  labs(title = "Boxplot of PtS 2013 - 2024",
+       x = "Taylor Attend",
+       y = "PtS") +
+  scale_fill_manual(values = c( "no" = "red", "yes" = "blue"), labels = c("Games Taylor Did Not Attend", "Games Taylor Attended"))
+```
+
+As you can see, the games Taylor attended seems to have a lower distribution, with a slightly smaller mean. However this change in distribution does not seem to be very significant.
+
+Lets try narrowing the distribution of games Taylor did not attend to 2019 - 2024 (the start to the Chiefs dynasty).
+
+```{r}
+kcc_g_test |> group_by(Taylor_Attend) |> 
+  summarize(
+    num_total = n(),
+    num_missing = sum(is.na(PtS)),
+    min = min(PtS, na.rm = TRUE),
+    Q1 = quantile(PtS, 0.25, na.rm = TRUE),
+    median = median(PtS, na.rm = TRUE),
+    Q3 = quantile(PtS, 0.75, na.rm = TRUE),
+    max = max(PtS, na.rm = TRUE),
+    mean = mean(PtS, na.rm = TRUE),
+    sd = sd(PtS, na.rm = TRUE)
+  )
+ggplot(data = kcc_g_test, aes(x = Taylor_Attend, y = PtS, fill = Taylor_Attend)) + 
+  geom_boxplot() +
+  geom_jitter(width = 0.2, alpha = 0.5) +  # Avoids overlapping points
+  coord_flip() +
+  theme_minimal() +
+  labs(title = "Boxplot of PtS during 2023 - 2024",
+       x = "Taylor Attend",
+       y = "PtS") +
+  scale_fill_manual(values = c( "no" = "red", "yes" = "blue"), labels = c("Games Taylor Did Not Attend", "Games Taylor Attended"))
+```
+
+Here we can see that the games Taylor attended have a greater distribution then those she did not attend.
+
+```{r}
+library(ggplot2)
+
+ggplot(kcc_g_test, aes(x = TotYd, y = PtS, color = Taylor_Attend)) +
+  geom_point(size = 4, alpha = 0.8) +
+  scale_color_manual(values = c("red", "blue")) +
+  labs(
+    title = "Chiefs Points Scored vs Total Yards",
+    x = "Total Yards (TotYd)",
+    y = "Points Scored (PtS)",
+    color = "Taylor Swift Attendance"
+  ) +
+  theme_minimal()
+
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(kcc_g_test, aes(x = ExOff, y = PtS, color = Taylor_Attend)) +
+  geom_point(size = 4, alpha = 0.8) +
+  scale_color_manual(values = c("red", "blue")) +
+  labs(
+    title = "Chiefs ExOff vs Total Yards",
+    x = "Total Yards (TotYd)",
+    y = "Points Scored (PtS)",
+    color = "Taylor Swift Attendance"
+  ) +
+  theme_minimal()
+
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(kcc_g_test, aes(x = FirstD, y = PtS, color = Taylor_Attend)) +
+  geom_point(size = 4, alpha = 0.8) +
+  scale_color_manual(values = c("red", "blue")) +
+  labs(
+    title = "Chiefs First Down Count vs Total Yards",
+    x = "Total Yards (TotYd)",
+    y = "Points Scored (PtS)",
+    color = "Taylor Swift Attendance"
+  ) +
+  theme_minimal()
+
+```
+
+We will now find appropriate explanitory variables with LASSO
+
+```{r Lasso-tidy model}
+kcc_lasso_model <- linear_reg(mode = "regression", engine = "glmnet",
+                          penalty = tune(), # let's tune the lambda penalty term
+                          mixture = 1) # mixture = 1 specifies pure LASSO
+
+kcc_lasso_recipe <- recipe(
+  PtS ~ PtA 
+  + FirstD 
+  + TotYd 
+  + PassY 
+  + RushY 
+  + TotYd_Alwd 
+  + PassY_Alwd 
+  + RushY_Alwd, # response ~ predictors
+  data = kcc_g_train
+) |>
+  step_normalize(all_numeric_predictors()) |> # don't scale the response
+  step_dummy(all_nominal_predictors())
+
+kcc_lasso_wflow <- workflow() |>
+  add_model(kcc_lasso_model) |>
+  add_recipe(kcc_lasso_recipe) # same recipe is needed, no need to reinvent the wheel
+```
+
+```{r tune model kfold lasso}
+kcc_cv <- vfold_cv(kcc_g_train, v = 10)
+kcc_lasso_tune <- tune_grid(kcc_lasso_model, 
+                      kcc_lasso_recipe, 
+                      resamples = kcc_cv, 
+                      grid = grid_regular(penalty(range = c(-2, 2)), levels = 50))
+```
+
+```{r tune model kfold lasso 2}
+kcc_lasso_tune |>
+  collect_metrics() |>
+  filter(.metric == "rmse") |>
+  ggplot(mapping = aes(x = penalty, y = mean)) + geom_point() + geom_line() +
+  scale_x_log10()
+```
+
+```{r select best lasso}
+lasso_best <- kcc_lasso_tune |>
+  select_best(
+    metric = "rmse"
+    #,desc(penalty) # order penalty from largest (highest bias = simplest model) to smallest
+)
+lasso_best
+```
+
+```{r lasso calibration check}
+library(modeltime)
+library(ggplot2)
+lasso_wflow_final <- kcc_lasso_wflow |>
+  finalize_workflow(parameters = lasso_best) 
+
+lasso_pred_check <- lasso_wflow_final |>
+  fit_resamples(
+    resamples = kcc_cv,
+    # save the cross-validated predictions
+    control = control_resamples(save_pred = TRUE)
+) |> 
+  collect_predictions()
+
+# using built-in defaults from probably
+cal_plot_regression(
+  lasso_pred_check,
+  truth = PtS,
+  estimate = .pred
+)
+
+```
+
+```{r fit lasso-tidy model}
+kcc_lasso_fit <- lasso_wflow_final |>
+  fit(data = kcc_g_train)
+kcc_lasso_fit
+```
+
+```{r look at lasso path}
+kcc_lasso_fit |>
+  extract_fit_engine() |>
+  plot(xvar = "lambda", label = TRUE)
+```
+
+```{r get coefficient estimates lasso}
+kcc_lasso_coef <- kcc_lasso_fit |>
+  broom::tidy()
+kcc_lasso_coef 
+```
+
+Here we can see that important variables are, First Down Count, Total Yards, Rushing Yards, and Passing Yards Allowed. We will now train a model with this data.
+
 ## Modeling
+
+# Train Model
+
+```{r workflow linear}
+kcc_linear_model <- linear_reg(mode = "regression", engine = "lm")
+
+kcc_linear_wflow <- workflow() |>
+  add_model(kcc_linear_model)
+```
+
+```{r create recipe linear}
+kcc_linear_recipe <- recipe(
+  PtS ~ FirstD
+  + TotYd 
+  + RushY 
+  + PassY 
+  ,data = kcc_g_train
+) |>
+  step_normalize(all_numeric_predictors()) #convert to zscores
+
+kcc_linear_recipe
+```
+
+```{r add recipe to workflow linear}
+kcc_linear_wflow <- kcc_linear_wflow |>
+  add_recipe(kcc_linear_recipe)
+
+
+kcc_linear_wflow
+```
+
+```{r fit linear model}
+kcc_linear_fit <- fit(kcc_linear_wflow, data = kcc_g_train)
+kcc_linear_fit
+```
+
+# Predict response
+
+```{r make predictions linear}
+kcc_linear_predictions_tidy <- kcc_linear_fit |>
+  predict(new_data = kcc_g_test)
+kcc_linear_predictions_tidy
+```
+
+The following are the predictions of the test data as a whole
+
+```{r augmenasdfat linear regression}
+# augment is in the broom package, loaded with tidymodels
+kcc_predictions_test <- kcc_linear_fit |>
+  augment(
+  new_data = kcc_g_test,
+)
+  
+kcc_predictions_test |>
+  dplyr::select(
+    Year,
+    Ppp,
+    PtS,
+    .pred,
+    PtA,
+    TotYd,
+    PassY,
+    RushY,
+    TotYd_Alwd,
+    PassY_Alwd,
+    RushY_Alwd,
+    everything()
+  )
+
+```
+
+The following is predicted points of games with taylor attending
+
+```{r}
+# augment is in the broom package, loaded with tidymodels
+kcc_predictions_taylor <- kcc_linear_fit |>
+  augment(
+  new_data = kcc_g_taylor,
+)
+  
+kcc_predictions_test |>
+  dplyr::select(
+    Year,
+    Ppp,
+    PtS,
+    .pred,
+    PtA,
+    TotYd,
+    PassY,
+    RushY,
+    TotYd_Alwd,
+    PassY_Alwd,
+    RushY_Alwd,
+    everything()
+  )
+
+```
+
+```{r}
+# augment is in the broom package, loaded with tidymodels
+kcc_predictions_taylorless <- kcc_linear_fit |>
+  augment(
+  new_data = kcc_g_taylorless,
+)
+  
+kcc_predictions_taylorless |>
+  dplyr::select(
+    Year,
+    Ppp,
+    PtS,
+    .pred,
+    PtA,
+    TotYd,
+    PassY,
+    RushY,
+    TotYd_Alwd,
+    PassY_Alwd,
+    RushY_Alwd,
+    everything()
+  )
+
+```
+
+```{r}
+kcc_predictions_taylorless |>
+  mutate(
+    residual = PtS - .pred
+  ) |>
+  ggplot(
+    mapping = aes(x = .pred, y = residual)
+  ) +
+  geom_point() +
+  geom_smooth(method = "loess", se = FALSE) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  theme_minimal() +
+  labs(title = "Residuals vs. Fitted Values of Test Set")
+rmse(kcc_predictions_taylorless,
+     truth = PtS,
+     estimate = .pred)
+```
+
+```{r}
+kcc_predictions_taylor |>
+  mutate(
+    residual = PtS - .pred
+  ) |>
+  ggplot(
+    mapping = aes(x = .pred, y = residual)
+  ) +
+  geom_point() +
+  geom_smooth(method = "loess", se = FALSE) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  theme_minimal() +
+  labs(title = "Residuals vs. Fitted Values of Test Set")
+
+rmse(kcc_predictions_taylor,
+     truth = PtS,
+     estimate = .pred)
+```
+
+```{r residual vs fit plot}
+kcc_predictions_test |>
+  mutate(
+    residual = PtS - .pred
+  ) |>
+  ggplot(
+    mapping = aes(x = .pred, y = residual)
+  ) +
+  geom_point() +
+  geom_smooth(method = "loess", se = FALSE) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  theme_minimal() +
+  labs(title = "Residuals vs. Fitted Values of Test Set")
+
+rmse(kcc_predictions_taylorless,
+     truth = PtS,
+     estimate = .pred)
+```
 
 ## Insights
 
