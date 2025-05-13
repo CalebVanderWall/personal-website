@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="First Post – Home">
 <meta property="og:description" content="Post description for first post">
-<meta property="og:image" content="https://calebvanderwall.quarto.pub/home/blog/first-post/cover.jpg">
+<meta property="og:image" content="cover.jpg">
 <meta property="og:site_name" content="Home">
 </head>
 
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../Fnal Project.html"> 
-<span class="menu-text">ChiefsData Project</span></a>
+<span class="menu-text">Replace this with an interesting title</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -256,7 +256,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/calebvanderwall\.quarto\.pub\/home");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
