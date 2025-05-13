@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 75919f2d-a2ed-42eb-9848-768eae356842
+      url: 'https://calebvanderwall.quarto.pub/home'
