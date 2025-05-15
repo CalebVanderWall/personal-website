@@ -1,5 +1,9 @@
 project:
   type: website
+  output-dir: docs
+  render: 
+    - index.qmd
+    - FinalProject.qmd
 
 website:
   title: "Home"
@@ -9,7 +13,8 @@ website:
     right:
       - text: Home
         href: index.qmd
-      - FinalProject.qmd
+      - text: Chiefs Data Project
+        href: FinalProject.qmd
       
 format:
   html:
