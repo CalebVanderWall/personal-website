@@ -9,7 +9,7 @@ website:
     right:
       - text: Home
         href: index.qmd
-      - Fnal Project.qmd
+      - FinalProject.qmd
       
 format:
   html:

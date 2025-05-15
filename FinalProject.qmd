@@ -1,5 +1,5 @@
 ---
-title: "Shake It Off-ense: A Statitistical StudyOn Taylor Swifts Influence On The Kansas City Chiefs"
+title: "Shake It Off-ense: A Statitistical Study On Taylor Swifts Influence On The Kansas City Chiefs"
 ---
 
 ## Motivation and Context
@@ -12,7 +12,7 @@ Over the past 3 years I've become interested in fantasy football. This has lead 
 #| message: false
 
 # change this to the location of your Quarto file containing your project; then delete this comment
-here::i_am("Fnal Project.qmd")
+here::i_am("FinalProject.qmd")
 ```
 
 ## Main Objective
@@ -42,7 +42,7 @@ library(dplyr)
 ```
 
 | Package | Use |
-|----|----|
+|--------------------------------|----------------------------------------|
 | [here](https://github.com/jennybc/here_here) | to easily load and save data |
 | [readr](https://readr.tidyverse.org/) | to import the CSV file data |
 | [dplyr](https://dplyr.tidyverse.org/) | to massage and summarize data |
@@ -469,7 +469,7 @@ autoplot(all_models)
 The 3 red RMSE values are the linear, quadratic and spline regression models. The blue RMSE values are the K-Nearest Neighbor values with different K-values. As you can see the linear, quadratic and spline regression models preform better than the K-nearest Neighbors model. We will now determine the RMSE values of our linear, quadratic and spline regression models.
 
 ```{r rank results}
-rank_results(all_models2) |>
+rank_results(all_models) |>
   dplyr::select(wflow_id, .config, .metric, mean, std_err, rank) |>
   arrange(.metric, rank)
 ```
@@ -664,7 +664,7 @@ Our Taylor-attended model has a bias of 1.47, while the Taylor-less model has a 
 
 Since both models have positive bias values, this implies that the Chiefs tended to under perform in both scenarios. However, the higher bias in games without Taylor’s attendance indicates a greater average under performance in those games, relative to what the model predicted. This is an indication that the Chiefs tend to perform slightly better when Taylor Swift is present at their games.
 
-The average points score of Chiefs games from 2013 to 2024 is 26.85. This would mean that if Taylor's attendance would theoretically have a 5.58% increase in score.
+The average points score of Chiefs games from 2013 to 2024 is 26.85. This would mean that if Taylor's attendance would theoretically have a 5.58% increase in score. This is a fairly significant advantage when observing Points scored as an indicator of offensive success. However, between 2013 and 2024, there are only 10 games where the Chiefs lost by 2 points or fewer—scenarios where a 1.5-point scoring advantage could conceivably have changed the outcome of the game.
 
 ### Limitations and Future Work
 
