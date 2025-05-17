@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Shake It Off-ense: A Statitistical Study On Taylor Swifts Influence On The Kansas City Chiefs – Home</title>
+<title>Shake It Off-ense: A Causal Analysis of Taylor Swift’s Impact on Chiefs Game Outcomes – Home</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,7 +131,7 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Shake It Off-ense: A Statitistical Study On Taylor Swifts Influence On The Kansas City Chiefs – Home">
+<meta property="og:title" content="Shake It Off-ense: A Causal Analysis of Taylor Swift’s Impact on Chiefs Game Outcomes – Home">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Home">
 </head>
@@ -159,7 +159,7 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./FinalProject.html" aria-current="page"> 
-<span class="menu-text">Shake It Off-ense: A Statitistical Study On Taylor Swifts Influence On The Kansas City Chiefs</span></a>
+<span class="menu-text">Chiefs Data Project</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -178,7 +178,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Shake It Off-ense: A Statitistical Study On Taylor Swifts Influence On The Kansas City Chiefs</h1>
+<h1 class="title">Shake It Off-ense: A Causal Analysis of Taylor Swift’s Impact on Chiefs Game Outcomes</h1>
 </div>
 
 
@@ -197,7 +197,10 @@ window.Quarto = {
 
 <section id="motivation-and-context" class="level2">
 <h2 class="anchored" data-anchor-id="motivation-and-context">Motivation and Context</h2>
-<p>Over the past 3 years I’ve become interested in fantasy football which has led me to explore statitics associated with football in order to better understand predicted out comes of performance of players and teams. Growing up with two sisters , I also grew up listening to alot of Taylor Swift. I’ve also grown up with two sisters who have been die hard Taylor Swift fans their whole lives. Though these two facts about my life seem to be unrelated however, If you’ve watched a Kansis city chiefs game in the past two years or heard any news at all about Taylor Swift, you would know that they are unfortunately very related. The world was set ablaze in September 2023 when Taylor Swift and Travis Kelce announced they were in a relationship. Ticket and Travis Kelce Jersey revenue skyrocketed as the market was introduced to millions of Swifties trying to secure the latest Taylor Swift clout to wear at her next show. As their high profile relationship continues, I am interested in how this relationship has effected the perfomance of the Kansas City.</p>
+<p>Over the past 3 years I’ve become interested in fantasy football which has led me to explore football statistics in order to better predict the performance of teams and players. Growing up with two sisters , I also grew up listening to every new Taylor Swift album on repeat. Though these two facts about my life seem to be unrelated however, If you’ve watched a Chiefs game in the past two years or heard any news at all about Taylor Swift, you would know that they are unfortunately very related.</p>
+<p>The world was set ablaze in September 2023 when Taylor Swift and Travis Kelce announced their relationship to the world. Ticket sales for Chiefs games as well as Travis Kelce jersey revenue jumped dramatically as the NFL marketplace was bombarded by millions of Swifties. The biggest pop-star in recent history meets the most dominating NFL team since the Tom Brady era of the Patriots. Needless to say, Taylor Swift and Travis Kelce’s high profile relationship has become a major topic in pop culture.</p>
+<p>Taylor Swift’s presence at Chiefs games is obvious and some would say obnoxious, with no less than 3 showings a game averaging around 15 seconds a shot. If Travis Kelce is involved in a play onscreen at a game that Taylor is attending, it is almost certain that a pan to this blonde haired mega star celebrating with her friends is around the corer. This constant coverage has been met with adoration from her fans - and hostility from some Chief supporters.</p>
+<p>Out of this cultural spotlight emerged a fascinating question: <em>Does Taylor Swift’s attendance actually impact the Chiefs’ performance?</em> This analysis aims to explore that question through a causal lens.</p>
 </section>
 <section id="main-objective" class="level2">
 <h2 class="anchored" data-anchor-id="main-objective">Main Objective</h2>
@@ -289,9 +292,34 @@ window.Quarto = {
 </section>
 <section id="data-description" class="level2">
 <h2 class="anchored" data-anchor-id="data-description">Data Description</h2>
-<p>The data I will be using is Kansas City Chiefs season performance statistics form https://www.pro-football-reference.com/ from 2013 to 2024. This data is collected from the staff of Pro Football Reference. This site is the leading football statistical reference site, and is sited by many others. I am constricting data to 2013 - 2024 since 2013 is when Patrick Mahomes was drafted onto the Kansas City Chiefs ans started a new era of their franchise.</p>
-<p>Variables</p>
-<p>Year - Year game took place. Week - Week of the season game took place. Day - Day of the week game took place. Time - Time of day game took place. Outcome - Outcome of game. OT - Indicates overtime took place. Rec - Redord of team. Location - Indicates hom or away game. Ppp - Opponent team name. PtS - Points scored. PtA - Points Allowed. FirstD - First down count. TotYd - Total yards gained. PassY - Passing yards. RushY - Rushng yards. TO - Timeouts taken. FirstD_Alwd - Opponentfirst dow count. TotYd_Alwd - Opponent total yards gained. PassY_Alwd - Opponent total passing yards. RushY_Alwd - Opponent total rushing yards. TO_Alwd - Opponent touchdowns ExOff - Expected Offensive performance. ExDef - Average expected points for every play. ExSpec - Expected special teams performance. Taylor_Attend - Indicates attendance of Taylor Swift</p>
+<p>The data I will be using consists of Kansas City Chiefs season performance statistics from Pro Football Reference spanning the 2013 to 2024 seasons. I am constraining the data to this time frame because 2013 marks the year Andy Reid was hired as head coach, ushering in a new era of consistent leadership and a distinct shift in the team’s playing style and strategic approach. This period provides a cohesive and relevant context for analyzing performance trends and causal impacts.</p>
+<section id="data-dictionary" class="level3">
+<h3 class="anchored" data-anchor-id="data-dictionary">Data Dictionary</h3>
+<p>Year – The year the game took place.</p>
+<p>Week – The week of the NFL season in which the game was played.</p>
+<p>Day – The day of the week the game occurred.</p>
+<p>Time – The time of day the game started.</p>
+<p>Outcome – The result of the game (Win or Loss).</p>
+<p>OT – Indicates whether the game went into overtime.</p>
+<p>Rec – The team’s win-loss record at the time of the game.</p>
+<p>Location – Indicates whether it was a home or away game.</p>
+<p>Opp – The name of the opposing team.</p>
+<p>PtS – Points scored by the Chiefs.</p>
+<p>PtA – Points allowed (points scored by the opponent).</p>
+<p>FirstD – Number of first downs achieved by the Chiefs.</p>
+<p>TotYd – Total yards gained on offense.</p>
+<p>PassY – Total passing yards.</p>
+<p>RushY – Total rushing yards.</p>
+<p>TO – Number of turnovers committed by the Chiefs.</p>
+<p>FirstD_Alwd – First downs allowed to the opponent.</p>
+<p>TotYd_Alwd – Total yards allowed to the opponent.</p>
+<p>PassY_Alwd – Passing yards allowed.</p>
+<p>RushY_Alwd – Rushing yards allowed.</p>
+<p>TO_Alwd – Turnovers forced by the Chiefs’ defense.</p>
+<p>ExOff – Expected offensive performance (expected points gained on offense).</p>
+<p>ExDef – Expected defensive performance (average expected points prevented per play).</p>
+<p>ExSpec – Expected special teams performance.</p>
+<p>Taylor_Attend – Indicates whether Taylor Swift attended the game (Yes/No).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>kcc_g_16 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_16.txt"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>kcc_g_24 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_24.txt"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
@@ -307,16 +335,19 @@ window.Quarto = {
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>kcc_g_14 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_14.txt"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>kcc_g_13 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data/kcc_g_13.txt"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
 <section id="data-limitations" class="level3">
 <h3 class="anchored" data-anchor-id="data-limitations">Data Limitations</h3>
-<p>Choosing a variable to indicate the success of the offense is the first step. Variables such as Outcome, PtS (points scored), TotYd (total yards gained) all seem to be adequate indicators for success for an offence. It is significant that we are measuring strictly offensive performance. Therefore any variable also indicating Defensive performance or Special teams performance should be left out. Whn using Outcome as an indicator fo success, we’d be studying whether the Chiefs won or lost a game. In football , the defensive performance is largly viewed as more important than offensive performance iin securing a win. For this reason, whether a team won or loss is largly an indcator whether the defence performed well or not. For this reason we will not use Outcome as a response variable. TotYd (total yards gained) seems to be a good response variable because it shows how many yards the offense was able to gain during a game. This does not include yards gained by defense or special teams. It makes sense to explore yards gained by an offense to measure success, however the goal of an offense is not to merely gain yards, but to score points. This variable fails to reward offenses for scoring points. The advantage to using PtS (points scored) to measure for success is that it rewards offenses for yards gained and for scoring points. It also rewards offenses for field goals which indicates a mild success of an offense. However, this variable indicates total points gained by offense, defense and special teams. THis means that defenseive scores i.e.&nbsp;pick sixes, fumble recoveries for touchdowns and safeties, also contributre to this variable. Extra points also contribute to this data. This does points score less accurate when strickly measuring offensive performance, however these forms of scoring not associated with the offense are rare and will not effect our results significantly. The perfect variable we could use would be offensive points scored, however this variable does not exist, therefore we will settle with Points scored.</p>
-<p>Another important factor when measuring offensive success is the skill of the opposing defense. Points scored against some teams are more impressive than other teams. 30 points scored against an inadequate defense may be less impressive that 14 points scored against the top defense in the league. To account for this, a variable could be constructed indicating the difference between predicted verse actual points scred by offene. THis variable would then indicate how well an offense performed against induvidual defenses. However, predicted points scored by offense is not a variable we have access to.</p>
-<p>We will proceed to use PtS (points scored) as a response variable for the success of the Chiefs Offense. The drawbacks and inaccuracies that some with using this variable as a indicator for offensive success should be kept in mind when considering the acccuracy of our model.</p>
+<p>Choosing a response variable to measure offensive success is a critical first step. While several variables—such as Outcome, TotYd (total yards), and PtS (points scored)—could serve as indicators, each comes with trade-offs.</p>
+<p>Outcome (win/loss) is influenced heavily by defensive and special teams performance, making it a poor standalone measure of offensive success. TotYd isolates offensive effort more cleanly, but it fails to account for the ultimate goal of the offense: scoring points.</p>
+<p>PtS offers the most direct measure of offensive success, as it captures the end result of drives and includes field goals, which reflect moderate offensive effectiveness. While PtS does include occasional scores from defense and special teams (e.g., pick-sixes, safeties, return touchdowns), these are relatively rare and unlikely to significantly skew the analysis.</p>
+<p>Ideally, we would use a variable representing offensive-only points scored, but such a measure is not available in our data. Therefore, we will proceed with PtS (points scored) as our response variable, acknowledging its limitations.</p>
+<p>Lastly, offensive output must be interpreted in the context of the opponent’s defensive strength—30 points against a weak defense is not equivalent to 14 against a top-tier one. While we lack a “predicted offensive output” metric to directly control for this, we recognize this limitation in our model’s interpretability.</p>
 </section>
 </section>
 <section id="data-wrangling" class="level2">
 <h2 class="anchored" data-anchor-id="data-wrangling">Data Wrangling</h2>
-<p>Some data wrangling for our data sets to be in a usable format. We will move the column and row names to appropriate positions in our data frame. We will also rmeove week title and substitue them, for week numbers. We will also add a Taylor Attendance variable from data produced by me.</p>
+<p>We cleaned the dataset by adjusting column names, converting week titles to numbers, and adding a manually created Taylor_Attend variable.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>file_paths <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path =</span> <span class="st">"C:/Users/caleb/OneDrive/Desktop/School/Math 437/Final Project/Project Data"</span>, </span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                         <span class="at">pattern =</span> <span class="st">"kcc_g_.*</span><span class="sc">\\</span><span class="st">.txt$"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
@@ -400,15 +431,20 @@ New names:
 </section>
 <section id="exploratory-data-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h2>
-<p>For our EDA we will look the Chiefs performance during Travis Kelce and Taylor Swift’s relationship. Ther relationship began in Septermber of 2023 with Taylporo attending her frst Chiefs game on September 24th, 2023. For this reason, we will look at the Chiefs 2023 and 2024 seasons to access our data.</p>
-<p>When creating a training set for our data, we will go back to 2013. This was the year Andy Reid became the head coach of the Kansas City Chiefs and marks the beginning of a new era for the team. We are not using data from before 2013, as it would skew our model toward the performance of the Chiefs during a fundamentally different period — before Reid’s leadership and the offensive system he brought with him. Including older data would dilute the model’s ability to learn patterns that reflect the team’s modern strategies, play style, and overall performance under Reid’s coaching.</p>
+<p>For our EDA, we focus on the Chiefs’ performance during Taylor Swift and Travis Kelce’s relationship, which began in September 2023. Since her first game attendance was on September 24, 2023, we use data from the 2023 and 2024 seasons.</p>
+<p>To train our model, we include data from 2013 onward—the year Andy Reid became head coach. Data before 2013 is excluded, as it reflects a different era with distinct strategies and would weaken the model’s relevance to the current team.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>kcc_g_train <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(<span class="fu">list</span>(kcc_g_13, kcc_g_14, kcc_g_15, kcc_g_16, kcc_g_17, kcc_g_18, kcc_g_19, kcc_g_20, kcc_g_21, kcc_g_22))</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>kcc_g_test <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(kcc_g_23, kcc_g_24)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>kcc_g_all <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(kcc_g_train, kcc_g_test)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>kcc_g_dyn <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(kcc_g_19, kcc_g_20, kcc_g_21, kcc_g_22, kcc_g_23, kcc_g_24)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>kcc_g_taylor <span class="ot">&lt;-</span> <span class="fu">filter</span>(kcc_g_test, Taylor_Attend <span class="sc">==</span> <span class="st">"yes"</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>kcc_g_taylorless <span class="ot">&lt;-</span> <span class="fu">filter</span>(kcc_g_test, Taylor_Attend <span class="sc">==</span> <span class="st">"no"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>kcc_g_test <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(kcc_g_23, kcc_g_24)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>kcc_g_all <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(kcc_g_train, kcc_g_test)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>kcc_g_dyn <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(kcc_g_19, kcc_g_20, kcc_g_21, kcc_g_22, kcc_g_23, kcc_g_24)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>kcc_g_taylor <span class="ot">&lt;-</span> <span class="fu">filter</span>(kcc_g_test, Taylor_Attend <span class="sc">==</span> <span class="st">"yes"</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>kcc_g_taylorless <span class="ot">&lt;-</span> <span class="fu">filter</span>(kcc_g_test, Taylor_Attend <span class="sc">==</span> <span class="st">"no"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>To give context as to how the Chiefs performed during his time period, here is the distribution of points scored for 2013 to 2024 seasons.</p>
 <div class="cell">
@@ -426,7 +462,6 @@ New names:
 </div>
 </div>
 </div>
-<p>A notable increase in points scored can be observed from 2017 to 2018. This was the year that Patrick Mahomes became the starting quarterback. It may be necessary to constrict our training data to 2018 - 2024 data, however this would lead to far less data to train our model with (only 4 seasons of data!). Therefore we will proceed with or initial 2013 to 2024 seasons.</p>
 <p>We will now explore the distribution of Points scored by the Chiefs when Taylor Attended verses games she did not attend.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>kcc_g_test <span class="sc">|&gt;</span> <span class="fu">group_by</span>(Taylor_Attend) <span class="sc">|&gt;</span> </span>
@@ -456,7 +491,7 @@ New names:
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Boxplot of PtS during 2023 - 2024"</span>,</span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Taylor Attend"</span>,</span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"PtS"</span>) <span class="sc">+</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>( <span class="st">"no"</span> <span class="ot">=</span> <span class="st">"red"</span>, <span class="st">"yes"</span> <span class="ot">=</span> <span class="st">"blue"</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Games Taylor Did Not Attend"</span>, <span class="st">"Games Taylor Attended"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>( <span class="st">"no"</span> <span class="ot">=</span> <span class="st">"red"</span>, <span class="st">"yes"</span> <span class="ot">=</span> <span class="st">"gold"</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Games Taylor Did Not Attend"</span>, <span class="st">"Games Taylor Attended"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -471,7 +506,7 @@ New names:
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(kcc_g_test, <span class="fu">aes</span>(<span class="at">x =</span> TotYd, <span class="at">y =</span> PtS, <span class="at">color =</span> Taylor_Attend)) <span class="sc">+</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>)) <span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"gold"</span>)) <span class="sc">+</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Chiefs Points Scored vs Total Yards"</span>,</span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Total Yards (TotYd)"</span>,</span>
@@ -488,14 +523,14 @@ New names:
 </div>
 </div>
 <p>Unsurprisingly, we can observe a fairly linear relationship here.</p>
-<p>Next we will observe the relationship between ExOff and PtS variables. Unfortunately, I am unaware as to what ExOff is predicting. It is an indication of some sorts of the offensive performance of the team. I am hypothesizing that it is the average expected score for each offensive play of the game.</p>
+<p>Next, we examine the relationship between the ExOff and PtS variables. While the exact definition of ExOff is unclear, it appears to reflect some measure of offensive performance. We hypothesize that ExOff represents the average expected points per offensive play in a game.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(kcc_g_test, <span class="fu">aes</span>(<span class="at">x =</span> ExOff, <span class="at">y =</span> PtS, <span class="at">color =</span> Taylor_Attend)) <span class="sc">+</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>)) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"gold"</span>)) <span class="sc">+</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Chiefs ExOff vs Total Yards"</span>,</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Total Yards (TotYd)"</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Expected Off (ExOff)"</span>,</span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Points Scored (PtS)"</span>,</span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Taylor Swift Attendance"</span></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
@@ -508,17 +543,17 @@ New names:
 </div>
 </div>
 </div>
-<p>A linear relationship is again observable; however, we have chosen not to include this variable in our model, as its underlying significance is unclear.</p>
+<p>A stronger linear relationship is again observable; however, we have chosen not to include this variable in our model, as its underlying significance is unclear.</p>
 <p>Lastly, we will observe the relationship between fist down count and Points scored.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(kcc_g_test, <span class="fu">aes</span>(<span class="at">x =</span> FirstD, <span class="at">y =</span> PtS, <span class="at">color =</span> Taylor_Attend)) <span class="sc">+</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>)) <span class="sc">+</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"gold"</span>)) <span class="sc">+</span></span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Chiefs First Down Count vs Total Yards"</span>,</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Total Yards (TotYd)"</span>,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"First Down Count (FirstD) "</span>,</span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Points Scored (PtS)"</span>,</span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Taylor Swift Attendance"</span></span>
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
@@ -531,454 +566,184 @@ New names:
 </div>
 </div>
 </div>
-<p>We will now find appropriate explanatory variables with a LASSO model</p>
+<p>We will continue using Points Scored (PtS) as our response variable.</p>
+</section>
+<section id="causal-inference" class="level2">
+<h2 class="anchored" data-anchor-id="causal-inference">Causal Inference</h2>
+<p>In order to determine If Taylor Swift’s attendance at Chiefs game have a significant effect on points scored, we will perform causal inference. Here we are trying to infer the effect a treatment has on population or otherwise known as Average Treatment Effect (ATE). In our case, the treatment is Taylor Swifts Attendance, and our population is Chiefs games from 2023 to 2024. In order to determine ATE, we will use the following equation.</p>
+<p><span class="math display">\[
+\text{ATE} = \pi_{\text{treated}} \cdot \text{ATT} + \pi_{\text{untreated}} \cdot \text{ATU}
+\]</span></p>
+<p>Here <span class="math inline">\(\pi\)</span> indicates proportion not 3.14159.</p>
+<p><strong>ATT</strong> is defined as the average treatment effect has on the treated population. In our case, this refers to the effect Taylor Swift has on games she attended. Here is a mathematical expression of ATT.</p>
+<p><span class="math display">\[
+\text{ATT} = \text{E}[Y_i^1 - Y_i^0 \, | \, X_i = 1]
+\]</span></p>
+<p><span class="math display">\[
+\text{ATT} = [Y_{i} - \text{E}(Y_i^0) \, | \, X_i = 1]
+\]</span></p>
+<p>Here <span class="math inline">\(Y_i^1\)</span> is the outcome that would occur if treated—that is, the points scored if Taylor attended—and <span class="math inline">\(Y_i^0\)</span> is the outcome that would occur if Taylor did not attend. Finally, <span class="math inline">\(X_i\)</span> is a treatment indicator, where <span class="math inline">\(X_i = 1\)</span> denotes games Taylor attended.</p>
+<p><strong>ATU</strong> is defined as average treatment effect on the untreated populating. In our case this refers to the effect Taylor Swift would have had at games she did not attend. The following is a mathematical expression of ATU.</p>
+<p><span class="math display">\[
+\text{ATU} = \text{E}[Y_i^1 - Y_i^0 \, | \, X_i = 0]
+\]</span> <span class="math display">\[
+\text{ATU} = [\text{E}(Y_i^1) - Y_i \, | \, X_i = 0]
+\]</span></p>
+<p>The following data frame presents the data we have so far for these calculations.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>kcc_lasso_model <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>(<span class="at">mode =</span> <span class="st">"regression"</span>, <span class="at">engine =</span> <span class="st">"glmnet"</span>,</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">penalty =</span> <span class="fu">tune</span>(), </span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">mixture =</span> <span class="dv">1</span>) </span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>kcc_lasso_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  PtS <span class="sc">~</span> PtA </span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> FirstD </span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> TotYd </span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> PassY </span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> RushY </span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> TotYd_Alwd </span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> PassY_Alwd </span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> RushY_Alwd, </span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> kcc_g_train</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>()) <span class="sc">|&gt;</span> </span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_dummy</span>(<span class="fu">all_nominal_predictors</span>())</span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>kcc_lasso_wflow <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">|&gt;</span></span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_model</span>(kcc_lasso_model) <span class="sc">|&gt;</span></span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_recipe</span>(kcc_lasso_recipe) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>kcc_disp <span class="ot">&lt;-</span> kcc_g_test <span class="sc">|&gt;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    Year,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    Ppp,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    PtS,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    Taylor_Attend</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a> kcc_disp <span class="ot">&lt;-</span> kcc_disp <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">Taylor_Outcome_Y1 =</span> (<span class="fu">ifelse</span>(Taylor_Attend <span class="sc">==</span> <span class="st">"yes"</span>, PtS, <span class="cn">NA</span>)))</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a> kcc_disp <span class="ot">&lt;-</span> kcc_disp <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">Taylorless_Outcome_Y0 =</span> (<span class="fu">ifelse</span>(Taylor_Attend <span class="sc">==</span> <span class="st">"no"</span>, PtS, <span class="cn">NA</span>)))</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a> kcc_disp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 41 × 6
+    Year Ppp           PtS Taylor_Attend Taylor_Outcome_Y1 Taylorless_Outcome_Y0
+   &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;                     &lt;dbl&gt;                 &lt;dbl&gt;
+ 1  2023 Detroit Li…    20 no                           NA                    20
+ 2  2023 Jacksonvil…    17 no                           NA                    17
+ 3  2023 Chicago Be…    41 yes                          41                    NA
+ 4  2023 New York J…    23 yes                          23                    NA
+ 5  2023 Minnesota …    27 no                           NA                    27
+ 6  2023 Denver Bro…    19 yes                          19                    NA
+ 7  2023 Los Angele…    31 yes                          31                    NA
+ 8  2023 Denver Bro…     9 no                           NA                     9
+ 9  2023 Miami Dolp…    21 no                           NA                    21
+10  2023 Philadelph…    17 no                           NA                    17
+# ℹ 31 more rows</code></pre>
+</div>
+</div>
+<p>To calculate the theoretical ATE, we would need both the points scored when she attended (Taylor_Outcome_Y1) and the points scored when she did not attend (Taylorless_Outcome_Y0). Since each game only has one of these two conditions, ATE is impossible to calculate without a time machine and an incredible amount of persuation.</p>
+<p>To solve this problem, we will estimate ATE with the following formula.</p>
+<p><span class="math display">\[
+\text{E}(\text{ATE}) = \pi_{\text{treated}} \cdot \text{E}\left[Y_i - \text{E}(Y_i^0)\right] + \pi_{\text{untreated}} \cdot \text{E}\left[\text{E}(Y_i^1) - Y_i\right]
+\]</span></p>
+<p>In order to determine <span class="math inline">\(\text{E}(ATE)\)</span> and to fill in he rest of our data frame, we will use modeling techniques to determine <span class="math inline">\(\text{E}(Y_i^0 \, | \, X_i = 1)\)</span> and <span class="math inline">\(\text{E}(Y_i^1 \, | \, X_i = 0)\)</span></p>
+</section>
+<section id="modeling" class="level2">
+<h2 class="anchored" data-anchor-id="modeling">Modeling</h2>
+<p>We begin with a Lasso model to identify key response variables for future analysis, using data from the 2013 to 2022 seasons.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>kcc_lasso_model <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>(<span class="at">mode =</span> <span class="st">"regression"</span>, <span class="at">engine =</span> <span class="st">"glmnet"</span>,</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">penalty =</span> <span class="fu">tune</span>(), </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">mixture =</span> <span class="dv">1</span>) </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>kcc_lasso_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  PtS <span class="sc">~</span> PtA </span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> FirstD </span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> TotYd </span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> PassY </span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> RushY</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> FirstD_Alwd</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> TotYd_Alwd </span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> PassY_Alwd </span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> RushY_Alwd, </span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> kcc_g_train</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>()) <span class="sc">|&gt;</span> </span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_dummy</span>(<span class="fu">all_nominal_predictors</span>())</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>kcc_lasso_wflow <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">|&gt;</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_model</span>(kcc_lasso_model) <span class="sc">|&gt;</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_recipe</span>(kcc_lasso_recipe) </span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>kcc_cv <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(kcc_g_train, <span class="at">v =</span> <span class="dv">10</span>)</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>kcc_lasso_tune <span class="ot">&lt;-</span> <span class="fu">tune_grid</span>(kcc_lasso_model, </span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>                      kcc_lasso_recipe, </span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>                      <span class="at">resamples =</span> kcc_cv, </span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>                      <span class="at">grid =</span> <span class="fu">grid_regular</span>(<span class="fu">penalty</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)), <span class="at">levels =</span> <span class="dv">50</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>kcc_cv <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(kcc_g_train, <span class="at">v =</span> <span class="dv">10</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>kcc_lasso_tune <span class="ot">&lt;-</span> <span class="fu">tune_grid</span>(kcc_lasso_model, </span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                      kcc_lasso_recipe, </span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">resamples =</span> kcc_cv, </span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">grid =</span> <span class="fu">grid_regular</span>(<span class="fu">penalty</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)), <span class="at">levels =</span> <span class="dv">50</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>→ A | warning: A correlation computation is required, but `estimate` is constant and has 0
-               standard deviation, resulting in a divide by 0 error. `NA` will be returned.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>There were issues with some computations   A: x1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>There were issues with some computations   A: x2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>There were issues with some computations   A: x4</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>There were issues with some computations   A: x5</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>There were issues with some computations   A: x7</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>There were issues with some computations   A: x9</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>There were issues with some computations   A: x10
-There were issues with some computations   A: x10</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code></code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>kcc_lasso_tune <span class="sc">|&gt;</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect_metrics</span>() <span class="sc">|&gt;</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(.metric <span class="sc">==</span> <span class="st">"rmse"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> penalty, <span class="at">y =</span> mean)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>kcc_lasso_tune <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect_metrics</span>() <span class="sc">|&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(.metric <span class="sc">==</span> <span class="st">"rmse"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> penalty, <span class="at">y =</span> mean)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="FinalProject_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="FinalProject_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>lasso_best <span class="ot">&lt;-</span> kcc_lasso_tune <span class="sc">|&gt;</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select_best</span>(</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">metric =</span> <span class="st">"rmse"</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>lasso_best</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>lasso_best <span class="ot">&lt;-</span> kcc_lasso_tune <span class="sc">|&gt;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select_best</span>(</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">metric =</span> <span class="st">"rmse"</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>lasso_best</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
   penalty .config              
     &lt;dbl&gt; &lt;chr&gt;                
-1   0.295 Preprocessor1_Model19</code></pre>
+1  0.0655 Preprocessor1_Model11</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>lasso_wflow_final <span class="ot">&lt;-</span> kcc_lasso_wflow <span class="sc">|&gt;</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">finalize_workflow</span>(<span class="at">parameters =</span> lasso_best) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We will do a calibration check to see how our penalized variable do in predicting our model.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modeltime)</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>lasso_wflow_final <span class="ot">&lt;-</span> kcc_lasso_wflow <span class="sc">|&gt;</span></span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">finalize_workflow</span>(<span class="at">parameters =</span> lasso_best) </span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>lasso_pred_check <span class="ot">&lt;-</span> lasso_wflow_final <span class="sc">|&gt;</span></span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit_resamples</span>(</span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">resamples =</span> kcc_cv,</span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># save the cross-validated predictions</span></span>
-<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">control =</span> <span class="fu">control_resamples</span>(<span class="at">save_pred =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> </span>
-<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect_predictions</span>()</span>
-<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="co"># using built-in defaults from probably</span></span>
-<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="fu">cal_plot_regression</span>(</span>
-<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>  lasso_pred_check,</span>
-<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">truth =</span> PtS,</span>
-<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">estimate =</span> .pred</span>
-<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="FinalProject_files/figure-html/lasso calibration check-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>kcc_lasso_fit <span class="ot">&lt;-</span> lasso_wflow_final <span class="sc">|&gt;</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(<span class="at">data =</span> kcc_g_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
-<p>The Lasso model does mildly well in predicting values.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>kcc_lasso_fit <span class="ot">&lt;-</span> lasso_wflow_final <span class="sc">|&gt;</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(<span class="at">data =</span> kcc_g_train)</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>kcc_lasso_fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>kcc_lasso_coef <span class="ot">&lt;-</span> kcc_lasso_fit <span class="sc">|&gt;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  broom<span class="sc">::</span><span class="fu">tidy</span>()</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>kcc_lasso_coef </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 3
+   term        estimate penalty
+   &lt;chr&gt;          &lt;dbl&gt;   &lt;dbl&gt;
+ 1 (Intercept)   27.8    0.0655
+ 2 PtA           -0.787  0.0655
+ 3 FirstD         1.03   0.0655
+ 4 TotYd          3.85   0.0655
+ 5 PassY          0      0.0655
+ 6 RushY          0.946  0.0655
+ 7 FirstD_Alwd    1.92   0.0655
+ 8 TotYd_Alwd     0      0.0655
+ 9 PassY_Alwd     0.733  0.0655
+10 RushY_Alwd    -0.477  0.0655</code></pre>
+</div>
+</div>
+<p>Here we can see that important variables include Points Allowed (PtA), First Down Count (FirstD), Total Yards (TotYd), total Rusing Yards (RushY), First Downs Allowed (FirstD_Alwd), Passing Yards Allowed (PassY_Alwd) and Rushing Yards Allowed (RushY_Alwd). We will proceed to use these variables in our following models.</p>
+<section id="training-causal-models" class="level3">
+<h3 class="anchored" data-anchor-id="training-causal-models">Training Causal Models</h3>
+<p>First We will train our “Taylor Model” with games that Taylor attended.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>kcc_taylor_model <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>(<span class="at">mode =</span> <span class="st">"regression"</span>, <span class="at">engine =</span> <span class="st">"lm"</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>kcc_taylor_wflow <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">|&gt;</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_model</span>(kcc_taylor_model)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>kcc_taylor_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  PtS <span class="sc">~</span> PtA</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> FirstD </span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> TotYd </span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> RushY</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> FirstD_Alwd</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> PassY_Alwd</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> RushY_Alwd,</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> kcc_g_taylor</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>kcc_taylor_wflow <span class="ot">&lt;-</span> kcc_taylor_wflow <span class="sc">|&gt;</span></span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_recipe</span>(kcc_taylor_recipe)</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>kcc_taylor_fit <span class="ot">&lt;-</span> <span class="fu">fit</span>(kcc_taylor_wflow, <span class="at">data =</span> kcc_g_taylor)</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>kcc_taylor_fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>══ Workflow [trained] ══════════════════════════════════════════════════════════
 Preprocessor: Recipe
 Model: linear_reg()
 
 ── Preprocessor ────────────────────────────────────────────────────────────────
-2 Recipe Steps
-
-• step_normalize()
-• step_dummy()
-
-── Model ───────────────────────────────────────────────────────────────────────
-
-Call:  glmnet::glmnet(x = maybe_matrix(x), y = y, family = "gaussian",      alpha = ~1) 
-
-   Df  %Dev Lambda
-1   0  0.00 4.9620
-2   1  4.72 4.5210
-3   1  8.63 4.1190
-4   1 11.88 3.7530
-5   1 14.58 3.4200
-6   1 16.82 3.1160
-7   1 18.68 2.8390
-8   1 20.22 2.5870
-9   1 21.51 2.3570
-10  1 22.57 2.1480
-11  1 23.45 1.9570
-12  1 24.19 1.7830
-13  2 25.10 1.6250
-14  3 26.07 1.4800
-15  3 26.88 1.3490
-16  4 27.56 1.2290
-17  4 28.27 1.1200
-18  4 28.87 1.0200
-19  4 29.36 0.9297
-20  4 29.76 0.8471
-21  4 30.10 0.7719
-22  4 30.38 0.7033
-23  4 30.62 0.6408
-24  4 30.81 0.5839
-25  4 30.97 0.5320
-26  4 31.10 0.4848
-27  4 31.21 0.4417
-28  4 31.31 0.4025
-29  4 31.38 0.3667
-30  4 31.45 0.3341
-31  4 31.50 0.3044
-32  4 31.54 0.2774
-33  4 31.58 0.2528
-34  4 31.61 0.2303
-35  4 31.63 0.2098
-36  4 31.65 0.1912
-37  4 31.67 0.1742
-38  4 31.69 0.1587
-39  5 31.71 0.1446
-40  6 31.76 0.1318
-41  6 31.80 0.1201
-42  6 31.83 0.1094
-43  6 31.86 0.0997
-44  6 31.88 0.0908
-45  6 31.90 0.0828
-46  6 31.92 0.0754
-
-...
-and 22 more lines.</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>kcc_lasso_fit <span class="sc">|&gt;</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">extract_fit_engine</span>() <span class="sc">|&gt;</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(<span class="at">xvar =</span> <span class="st">"lambda"</span>, <span class="at">label =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="FinalProject_files/figure-html/look at lasso path-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>kcc_lasso_coef <span class="ot">&lt;-</span> kcc_lasso_fit <span class="sc">|&gt;</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  broom<span class="sc">::</span><span class="fu">tidy</span>()</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>kcc_lasso_coef </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 9 × 3
-  term        estimate penalty
-  &lt;chr&gt;          &lt;dbl&gt;   &lt;dbl&gt;
-1 (Intercept)   27.8     0.295
-2 PtA            0       0.295
-3 FirstD         0.704   0.295
-4 TotYd          3.72    0.295
-5 PassY          0       0.295
-6 RushY          0.730   0.295
-7 TotYd_Alwd     0       0.295
-8 PassY_Alwd     1.35    0.295
-9 RushY_Alwd     0       0.295</code></pre>
-</div>
-</div>
-<p>Here we can see that important variables are, First Down Count, Total Yards, Rushing Yards, and Passing Yards Allowed. We will now train a model with this data.</p>
-</section>
-<section id="modeling" class="level2">
-<h2 class="anchored" data-anchor-id="modeling">Modeling</h2>
-<section id="model-selection" class="level3">
-<h3 class="anchored" data-anchor-id="model-selection">Model Selection</h3>
-<p>We will start by choosing an appropriate model. The models we will be considering are: Linear Regression, Polynomial Regression, K-Nearest Neighbors, and Spline Regression (Natural Splines). We will compare RMSE or Root Mean Squared Errors of these models to determine which model fits our data best. Root Mean Squared Error is defined as:</p>
-<p><span class="math display">\[
-\text{RMSE} = \sqrt{ \frac{1}{n} \sum_{i=1}^{n} \left( \hat{y}_i - y_i \right)^2 }
-\]</span></p>
-<p>RMSE measures how off a given model is by finding the average squared difference between predicted values and actual values. We then take the square root of this value to account for the square that occurred in the residual terms. A higher value RMSE indicates on average, a higher amount of inaccuracy in a model. Therefore, we will be looking for the model with the lowest RSME.</p>
-<p>In order to determine the RMSE of these models, we will use 10-fold Cross Validation (10-fold CV). The process of 10-fold CV involves splitting our training datainto 10 equal parts or “folds”. We then take these folds in tur and hold them out as test sets. We train our moel on te remaining 9 folds, then test our model on the remaining heldout test fold, and find the RMSE. After repeating this process with the 9 other folds we will have 10 RMSE values tat we will take the averae of. We will do thiisfor each model then determine whic model produces the smallest RMSE.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>kcc_linreg_model <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>(<span class="at">mode =</span> <span class="st">"regression"</span>, <span class="at">engine =</span> <span class="st">"lm"</span>)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>kcc_knn_model <span class="ot">&lt;-</span> <span class="fu">nearest_neighbor</span>(<span class="at">mode =</span> <span class="st">"regression"</span>,</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">engine =</span> <span class="st">"kknn"</span>,</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>                              <span class="at">neighbors =</span> <span class="fu">tune</span>(), <span class="at">dist_power =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>kcc_linear_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  PtS <span class="sc">~</span> FirstD</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> TotYd </span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> RushY </span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> PassY_Alwd, </span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> kcc_g_train</span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>kcc_quadratic_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(</span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>  PtS <span class="sc">~</span> FirstD</span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> TotYd </span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> RushY </span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> PassY_Alwd,</span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> kcc_g_train</span>
-<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
-<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_poly</span>(TotYd, <span class="at">degree =</span> <span class="dv">2</span>)</span>
-<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>kcc_knn_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(</span>
-<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a>  PtS <span class="sc">~</span> FirstD</span>
-<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> TotYd </span>
-<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> RushY </span>
-<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> PassY_Alwd,</span>
-<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> kcc_g_train</span>
-<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
-<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>())</span>
-<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a>kcc_ns_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>( PtS <span class="sc">~</span> FirstD</span>
-<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> TotYd </span>
-<span id="cb35-29"><a href="#cb35-29" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> RushY </span>
-<span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> PassY_Alwd,</span>
-<span id="cb35-31"><a href="#cb35-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> kcc_g_train) <span class="sc">|&gt;</span> <span class="fu">step_ns</span>(TotYd, <span class="at">deg_free =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>all_models <span class="ot">&lt;-</span> <span class="fu">workflow_set</span>(</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">preproc =</span> <span class="fu">list</span>(<span class="at">linear =</span> kcc_linear_recipe, <span class="at">quadratic =</span> kcc_quadratic_recipe, <span class="at">knn =</span> kcc_knn_recipe, kcc_ns_recipe),</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">models =</span> <span class="fu">list</span>(<span class="at">lr =</span> kcc_linreg_model,<span class="at">lr =</span> kcc_linreg_model, <span class="at">knn =</span> kcc_knn_model, <span class="at">lr =</span> kcc_linreg_model),</span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">cross =</span> <span class="cn">FALSE</span> <span class="co"># don't mix knn recipes with linear models or vice-versa</span></span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>all_models</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A workflow set/tibble: 4 × 4
-  wflow_id     info             option    result    
-  &lt;chr&gt;        &lt;list&gt;           &lt;list&gt;    &lt;list&gt;    
-1 linear_lr    &lt;tibble [1 × 4]&gt; &lt;opts[0]&gt; &lt;list [0]&gt;
-2 quadratic_lr &lt;tibble [1 × 4]&gt; &lt;opts[0]&gt; &lt;list [0]&gt;
-3 knn_knn      &lt;tibble [1 × 4]&gt; &lt;opts[0]&gt; &lt;list [0]&gt;
-4 recipe_4_lr  &lt;tibble [1 × 4]&gt; &lt;opts[0]&gt; &lt;list [0]&gt;</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 10-fold cv, not repeated</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1112</span>)</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>kcc_cv <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(kcc_g_train, <span class="at">v =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>knn.grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">neighbors =</span> <span class="fu">seq</span>(<span class="dv">2</span>,<span class="dv">16</span>, <span class="at">by =</span> <span class="dv">2</span>)) <span class="co"># set up tuning grid</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>all_models <span class="ot">&lt;-</span> <span class="fu">workflow_set</span>(</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">preproc =</span> <span class="fu">list</span>(<span class="at">linear =</span> kcc_linear_recipe,</span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">quadratic =</span> kcc_quadratic_recipe,</span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">knn =</span> kcc_knn_recipe,</span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">ns =</span> kcc_ns_recipe</span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>                 ),</span>
-<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">models =</span> <span class="fu">list</span>(<span class="at">lr =</span> kcc_linreg_model,</span>
-<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>                <span class="at">lr =</span> kcc_linreg_model,</span>
-<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>                <span class="at">knn2 =</span> kcc_knn_model,</span>
-<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>                <span class="at">lr =</span> kcc_linreg_model), <span class="co"># this is what is being tuned</span></span>
-<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">cross =</span> <span class="cn">FALSE</span> </span>
-<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>all_models <span class="ot">&lt;-</span> all_models <span class="sc">|&gt;</span></span>
-<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add the grid for JUST the knn model</span></span>
-<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">option_add</span>(<span class="at">grid =</span> knn.grid, <span class="at">id =</span> <span class="st">"knn_knn2"</span>) <span class="sc">|&gt;</span> <span class="co">#adding grid</span></span>
-<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">workflow_map</span>(<span class="st">"tune_grid"</span>,</span>
-<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a>               <span class="at">resamples =</span> kcc_cv,</span>
-<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a>               <span class="at">metrics =</span> <span class="fu">metric_set</span>(rmse), <span class="co"># can add more</span></span>
-<span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a>               <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>i   No tuning parameters. `fit_resamples()` will be attempted</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>i 1 of 4 resampling: linear_lr</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>✔ 1 of 4 resampling: linear_lr (1.4s)</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>i   No tuning parameters. `fit_resamples()` will be attempted</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>i 2 of 4 resampling: quadratic_lr</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>✔ 2 of 4 resampling: quadratic_lr (2.5s)</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>i 3 of 4 tuning:     knn_knn2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>✔ 3 of 4 tuning:     knn_knn2 (3.9s)</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>i   No tuning parameters. `fit_resamples()` will be attempted</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>i 4 of 4 resampling: ns_lr</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>✔ 4 of 4 resampling: ns_lr (1.5s)</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>all_models</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A workflow set/tibble: 4 × 4
-  wflow_id     info             option    result   
-  &lt;chr&gt;        &lt;list&gt;           &lt;list&gt;    &lt;list&gt;   
-1 linear_lr    &lt;tibble [1 × 4]&gt; &lt;opts[2]&gt; &lt;rsmp[+]&gt;
-2 quadratic_lr &lt;tibble [1 × 4]&gt; &lt;opts[2]&gt; &lt;rsmp[+]&gt;
-3 knn_knn2     &lt;tibble [1 × 4]&gt; &lt;opts[3]&gt; &lt;tune[+]&gt;
-4 ns_lr        &lt;tibble [1 × 4]&gt; &lt;opts[2]&gt; &lt;rsmp[+]&gt;</code></pre>
-</div>
-</div>
-<p>We will now plot the RMSE values to compare values.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(all_models)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="FinalProject_files/figure-html/plot stuff with autoplot-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>The 3 red RMSE values are the linear, quadratic and spline regression models. The blue RMSE values are the K-Nearest Neighbor values with different K-values. As you can see the linear, quadratic and spline regression models preform better than the K-nearest Neighbors model. We will now determine the RMSE values of our linear, quadratic and spline regression models.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rank_results</span>(all_models) <span class="sc">|&gt;</span></span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(wflow_id, .config, .metric, mean, std_err, rank) <span class="sc">|&gt;</span></span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(.metric, rank)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 11 × 6
-   wflow_id     .config              .metric  mean std_err  rank
-   &lt;chr&gt;        &lt;chr&gt;                &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;
- 1 quadratic_lr Preprocessor1_Model1 rmse     7.77   0.479     1
- 2 linear_lr    Preprocessor1_Model1 rmse     7.81   0.471     2
- 3 ns_lr        Preprocessor1_Model1 rmse     7.85   0.480     3
- 4 knn_knn2     Preprocessor1_Model8 rmse     7.93   0.497     4
- 5 knn_knn2     Preprocessor1_Model7 rmse     7.95   0.492     5
- 6 knn_knn2     Preprocessor1_Model6 rmse     8.00   0.493     6
- 7 knn_knn2     Preprocessor1_Model5 rmse     8.07   0.497     7
- 8 knn_knn2     Preprocessor1_Model4 rmse     8.16   0.496     8
- 9 knn_knn2     Preprocessor1_Model3 rmse     8.33   0.507     9
-10 knn_knn2     Preprocessor1_Model2 rmse     8.61   0.506    10
-11 knn_knn2     Preprocessor1_Model1 rmse     9.42   0.548    11</code></pre>
-</div>
-</div>
-<p>The quadratic model performed best with an RMSE of 7.77. We will proceed to use this to model our training set.</p>
-</section>
-</section>
-<section id="train-model" class="level1">
-<h1>Train Model</h1>
-<p>As noted before, we will be using 2013 to 2022 seasons to train our quadratic regression model. These seasons are included in the kcc_g_train data frame. We will be using the variables our LASSO model selected: FirstD (first down count), TotYd (Total Yards), RushY (rushing yards), and PassY_Alwd (Passing yards allowed).</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>kcc_linear_model <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>(<span class="at">mode =</span> <span class="st">"regression"</span>, <span class="at">engine =</span> <span class="st">"lm"</span>)</span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>kcc_linear_wflow <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">|&gt;</span></span>
-<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_model</span>(kcc_linear_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>kcc_quadratic_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(</span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  PtS <span class="sc">~</span> FirstD</span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> TotYd </span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> RushY </span>
-<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> PassY_Alwd,</span>
-<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> kcc_g_train</span>
-<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
-<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_poly</span>(TotYd, <span class="at">degree =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>kcc_quadratic_wflow <span class="ot">&lt;-</span> kcc_linear_wflow <span class="sc">|&gt;</span></span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_recipe</span>(kcc_quadratic_recipe)</span>
-<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>kcc_quadratic_wflow</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>══ Workflow ════════════════════════════════════════════════════════════════════
-Preprocessor: Recipe
-Model: linear_reg()
-
-── Preprocessor ────────────────────────────────────────────────────────────────
-1 Recipe Step
-
-• step_poly()
-
-── Model ───────────────────────────────────────────────────────────────────────
-Linear Regression Model Specification (regression)
-
-Computational engine: lm </code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>kcc_quadratic_fit <span class="ot">&lt;-</span> <span class="fu">fit</span>(kcc_quadratic_wflow, <span class="at">data =</span> kcc_g_train)</span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>kcc_quadratic_fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>══ Workflow [trained] ══════════════════════════════════════════════════════════
-Preprocessor: Recipe
-Model: linear_reg()
-
-── Preprocessor ────────────────────────────────────────────────────────────────
-1 Recipe Step
-
-• step_poly()
+0 Recipe Steps
 
 ── Model ───────────────────────────────────────────────────────────────────────
 
@@ -986,250 +751,259 @@ Call:
 stats::lm(formula = ..y ~ ., data = data)
 
 Coefficients:
- (Intercept)        FirstD         RushY    PassY_Alwd  TotYd_poly_1  
-    15.05674       0.19659       0.02509       0.02303      48.56795  
-TotYd_poly_2  
-    12.02799  </code></pre>
+(Intercept)          PtA       FirstD        TotYd        RushY  FirstD_Alwd  
+   1.434340     0.206344     0.393538     0.030346     0.011989    -0.438981  
+ PassY_Alwd   RushY_Alwd  
+   0.009074     0.037395  </code></pre>
 </div>
 </div>
-<p>Now that we have trained our model on 2013 to 2022 seasons, we now will predict the outcome of 2023 and 2024 points scored based on our chosen data, in hopes to observe a difference in residuals between games at which Taylor Attended veseres the games she did not attend.</p>
-</section>
-<section id="predict-response" class="level1">
-<h1>Predict response</h1>
-<p>As stated before , we will now predict the Points scored of games that occurred during Taylor Swift and Travis Kelce’s relationship, which are 2023 and 2024 seasons.</p>
-<p>The following are the predictions of the test data with both Taylor games (games which Taylor Swift attended) and Taylorless games (games which Taylor Swift did no attend).</p>
+<p>Now we will train our “Taylor-less” model with games Taylor did not attend.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># augment is in the broom package, loaded with tidymodels</span></span>
-<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>kcc_predictions_test <span class="ot">&lt;-</span> kcc_quadratic_fit <span class="sc">|&gt;</span></span>
-<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">augment</span>(</span>
-<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">new_data =</span> kcc_g_test,</span>
-<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a>kcc_predictions_test <span class="sc">|&gt;</span></span>
-<span id="cb62-8"><a href="#cb62-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(</span>
-<span id="cb62-9"><a href="#cb62-9" aria-hidden="true" tabindex="-1"></a>    Year,</span>
-<span id="cb62-10"><a href="#cb62-10" aria-hidden="true" tabindex="-1"></a>    Ppp,</span>
-<span id="cb62-11"><a href="#cb62-11" aria-hidden="true" tabindex="-1"></a>    PtS,</span>
-<span id="cb62-12"><a href="#cb62-12" aria-hidden="true" tabindex="-1"></a>    .pred</span>
-<span id="cb62-13"><a href="#cb62-13" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>kcc_taylorless_model <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>(<span class="at">mode =</span> <span class="st">"regression"</span>, <span class="at">engine =</span> <span class="st">"lm"</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>kcc_taylorless_wflow <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">|&gt;</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_model</span>(kcc_taylorless_model)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>kcc_taylorless_recipe <span class="ot">&lt;-</span> <span class="fu">recipe</span>(</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  PtS <span class="sc">~</span> PtA</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> FirstD </span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> TotYd </span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> RushY</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> FirstD_Alwd</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> PassY_Alwd</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> RushY_Alwd,</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> kcc_g_taylorless</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>kcc_taylorless_wflow <span class="ot">&lt;-</span> kcc_taylorless_wflow <span class="sc">|&gt;</span></span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_recipe</span>(kcc_taylorless_recipe)</span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>kcc_taylorless_fit <span class="ot">&lt;-</span> <span class="fu">fit</span>(kcc_taylorless_wflow, <span class="at">data =</span> kcc_g_taylorless)</span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>kcc_taylorless_fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 41 × 4
+<pre><code>══ Workflow [trained] ══════════════════════════════════════════════════════════
+Preprocessor: Recipe
+Model: linear_reg()
+
+── Preprocessor ────────────────────────────────────────────────────────────────
+0 Recipe Steps
+
+── Model ───────────────────────────────────────────────────────────────────────
+
+Call:
+stats::lm(formula = ..y ~ ., data = data)
+
+Coefficients:
+(Intercept)          PtA       FirstD        TotYd        RushY  FirstD_Alwd  
+   -8.58012     -0.69207      2.23804     -0.05511     -0.02784     -0.17735  
+ PassY_Alwd   RushY_Alwd  
+    0.08502      0.05225  </code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="predicting-response" class="level2">
+<h2 class="anchored" data-anchor-id="predicting-response">Predicting Response</h2>
+<p>We will now use our Taylor and Taylor-less models to determine the missing <span class="math inline">\(\text{E}(Y_i^0 \, | \, X_i = 1)\)</span> and <span class="math inline">\(\text{E}(Y_i^1 \, | \, X_i = 0)\)</span> values.</p>
+<p>We will start by finding <span class="math inline">\(\text{E}(Y_i^1 \, | \, X_i = 0)\)</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># augment is in the broom package, loaded with tidymodels</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>kcc_pred_taylorless <span class="ot">&lt;-</span> kcc_taylor_fit <span class="sc">|&gt;</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">augment</span>(</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">new_data =</span> kcc_g_taylorless,</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>kcc_pred_taylorless <span class="sc">|&gt;</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>    Year,</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>    Ppp,</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>    PtS,</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>    .pred</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 18 × 4
     Year Ppp                    PtS .pred
    &lt;int&gt; &lt;chr&gt;                &lt;dbl&gt; &lt;dbl&gt;
- 1  2023 Detroit Lions           20  23.4
- 2  2023 Jacksonville Jaguars    17  26.3
- 3  2023 Chicago Bears           41  30.6
- 4  2023 New York Jets           23  30.6
- 5  2023 Minnesota Vikings       27  24.4
- 6  2023 Denver Broncos          19  23.6
- 7  2023 Los Angeles Chargers    31  32.1
- 8  2023 Denver Broncos           9  18.1
- 9  2023 Miami Dolphins          21  20.3
-10  2023 Philadelphia Eagles     17  24.3
+ 1  2023 Detroit Lions           20  21.5
+ 2  2023 Jacksonville Jaguars    17  20.7
+ 3  2023 Minnesota Vikings       27  19.2
+ 4  2023 Denver Broncos           9  20.7
+ 5  2023 Miami Dolphins          21  17.0
+ 6  2023 Philadelphia Eagles     17  25.4
+ 7  2023 Las Vegas Raiders       31  25.5
+ 8  2023 Los Angeles Chargers    13  15.1
+ 9  2024 Atlanta Falcons         22  22.4
+10  2024 Los Angeles Chargers    17  19.3
+11  2024 San Francisco 49ers     28  23.3
+12  2024 Las Vegas Raiders       27  22.2
+13  2024 Buffalo Bills           21  19.6
+14  2024 Carolina Panthers       30  27.7
+15  2024 Los Angeles Chargers    19  19.5
+16  2024 Cleveland Browns        21  20.3
+17  2024 Pittsburgh Steelers     29  22.9
+18  2024 Denver Broncos           0  10.6</code></pre>
+</div>
+</div>
+<p>These are the predicted points scored by the Chiefs in 2023 and 2024 games that Taylor DID NOT attend, based on our model trained with games that Taylor DID attend.</p>
+<p>Now to populate the missing values under our Taylor-less outcome with these predicted values.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(kcc_disp)) {</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.na</span>(kcc_disp<span class="sc">$</span>Taylor_Outcome_Y1[i])) {</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    kcc_disp<span class="sc">$</span>Taylor_Outcome_Y1[i] <span class="ot">&lt;-</span> kcc_pred_taylorless<span class="sc">$</span>.pred[w]</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>    w <span class="ot">&lt;-</span> w <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>kcc_disp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 41 × 6
+    Year Ppp           PtS Taylor_Attend Taylor_Outcome_Y1 Taylorless_Outcome_Y0
+   &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;                     &lt;dbl&gt;                 &lt;dbl&gt;
+ 1  2023 Detroit Li…    20 no                         21.5                    20
+ 2  2023 Jacksonvil…    17 no                         20.7                    17
+ 3  2023 Chicago Be…    41 yes                        41                      NA
+ 4  2023 New York J…    23 yes                        23                      NA
+ 5  2023 Minnesota …    27 no                         19.2                    27
+ 6  2023 Denver Bro…    19 yes                        19                      NA
+ 7  2023 Los Angele…    31 yes                        31                      NA
+ 8  2023 Denver Bro…     9 no                         20.7                     9
+ 9  2023 Miami Dolp…    21 no                         17.0                    21
+10  2023 Philadelph…    17 no                         25.4                    17
 # ℹ 31 more rows</code></pre>
 </div>
 </div>
-<p>Now we will predict the points scored over our Taylor Games</p>
+<p>We will now find the value of <span class="math inline">\(\text{E}(Y_i^0 \, | \, X_i = 1)\)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># augment is in the broom package, loaded with tidymodels</span></span>
-<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>kcc_predictions_taylor <span class="ot">&lt;-</span> kcc_quadratic_fit <span class="sc">|&gt;</span></span>
-<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">augment</span>(</span>
-<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">new_data =</span> kcc_g_taylor,</span>
-<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a>kcc_predictions_taylor <span class="sc">|&gt;</span></span>
-<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(</span>
-<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a>    Year,</span>
-<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a>    Ppp,</span>
-<span id="cb64-11"><a href="#cb64-11" aria-hidden="true" tabindex="-1"></a>    PtS,</span>
-<span id="cb64-12"><a href="#cb64-12" aria-hidden="true" tabindex="-1"></a>    .pred,</span>
-<span id="cb64-13"><a href="#cb64-13" aria-hidden="true" tabindex="-1"></a>    PtA,</span>
-<span id="cb64-14"><a href="#cb64-14" aria-hidden="true" tabindex="-1"></a>    TotYd,</span>
-<span id="cb64-15"><a href="#cb64-15" aria-hidden="true" tabindex="-1"></a>    PassY,</span>
-<span id="cb64-16"><a href="#cb64-16" aria-hidden="true" tabindex="-1"></a>    RushY,</span>
-<span id="cb64-17"><a href="#cb64-17" aria-hidden="true" tabindex="-1"></a>    TotYd_Alwd,</span>
-<span id="cb64-18"><a href="#cb64-18" aria-hidden="true" tabindex="-1"></a>    PassY_Alwd,</span>
-<span id="cb64-19"><a href="#cb64-19" aria-hidden="true" tabindex="-1"></a>    RushY_Alwd,</span>
-<span id="cb64-20"><a href="#cb64-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">everything</span>()</span>
-<span id="cb64-21"><a href="#cb64-21" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># augment is in the broom package, loaded with tidymodels</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>kcc_pred_taylor <span class="ot">&lt;-</span> kcc_taylorless_fit <span class="sc">|&gt;</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">augment</span>(</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">new_data =</span> kcc_g_taylor,</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>kcc_pred_taylor <span class="sc">|&gt;</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>    Year,</span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>    Ppp,</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>    PtS,</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>    .pred</span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 23 × 29
-    Year Ppp             PtS .pred   PtA TotYd PassY RushY TotYd_Alwd PassY_Alwd
-   &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;
- 1  2023 Chicago Bears    41  30.6    10   456   303   153        203         87
- 2  2023 New York Jets    23  30.6    20   401   197   204        336        228
- 3  2023 Denver Bronc…    19  23.6     8   389   293    96        197         82
- 4  2023 Los Angeles …    31  32.1    17   483   415    68        358        219
- 5  2023 Green Bay Pa…    19  27.2    27   337   189   148        382        253
- 6  2023 Buffalo Bills    17  24.1    20   346   264    82        327        209
- 7  2023 New England …    27  20.8    17   326   283    43        206        154
- 8  2023 Las Vegas Ra…    14  18.8    20   308   223    85        205         48
- 9  2023 Cincinnati B…    25  24.1    17   373   241   132        263        159
-10  2023 Miami Dolphi…    26  28.9     7   409   262   147        264        188
-# ℹ 13 more rows
-# ℹ 19 more variables: RushY_Alwd &lt;dbl&gt;, .resid &lt;dbl&gt;, Week &lt;chr&gt;, Day &lt;chr&gt;,
-#   Date &lt;date&gt;, Time &lt;chr&gt;, Boxscore &lt;chr&gt;, Outcome &lt;chr&gt;, OT &lt;chr&gt;,
-#   Rec &lt;chr&gt;, Location &lt;chr&gt;, FirstD &lt;dbl&gt;, TO &lt;dbl&gt;, FirstD_Alwd &lt;dbl&gt;,
-#   TO_Alwd &lt;dbl&gt;, ExOff &lt;dbl&gt;, ExDef &lt;dbl&gt;, ExSpec &lt;dbl&gt;, Taylor_Attend &lt;chr&gt;</code></pre>
+<pre><code># A tibble: 23 × 4
+    Year Ppp                    PtS .pred
+   &lt;int&gt; &lt;chr&gt;                &lt;dbl&gt; &lt;dbl&gt;
+ 1  2023 Chicago Bears           41 36.0 
+ 2  2023 New York Jets           23 25.3 
+ 3  2023 Denver Broncos          19 21.5 
+ 4  2023 Los Angeles Chargers    31 30.1 
+ 5  2023 Green Bay Packers       19 30.0 
+ 6  2023 Buffalo Bills           17 23.4 
+ 7  2023 New England Patriots    27 17.1 
+ 8  2023 Las Vegas Raiders       14 10.9 
+ 9  2023 Cincinnati Bengals      25  4.40
+10  2023 Miami Dolphins          26 33.5 
+# ℹ 13 more rows</code></pre>
 </div>
 </div>
-<p>Here is a graph of the residuals verses fit and the rsme value.</p>
+<p>These are the predicted points scored by the Chiefs in 2023 and 2024 games if Taylor had not attended them.</p>
+<p>We will now populate the last of the missing data in our data frame with these predicted values.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>kcc_predictions_taylor <span class="sc">|&gt;</span></span>
-<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">residual =</span> PtS <span class="sc">-</span> .pred</span>
-<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb66-6"><a href="#cb66-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> .pred, <span class="at">y =</span> residual)</span>
-<span id="cb66-7"><a href="#cb66-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb66-8"><a href="#cb66-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb66-9"><a href="#cb66-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb66-10"><a href="#cb66-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb66-11"><a href="#cb66-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb66-12"><a href="#cb66-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Residuals vs. Fitted Values of Test Set"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="FinalProject_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rmse</span>(kcc_predictions_taylor,</span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">truth =</span> PtS,</span>
-<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(kcc_disp)) {</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.na</span>(kcc_disp<span class="sc">$</span>Taylorless_Outcome_Y0[i])) {</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    kcc_disp<span class="sc">$</span>Taylorless_Outcome_Y0[i] <span class="ot">&lt;-</span> kcc_pred_taylor<span class="sc">$</span>.pred[w]</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>    w <span class="ot">&lt;-</span> w <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>kcc_disp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 3
-  .metric .estimator .estimate
-  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
-1 rmse    standard        5.31</code></pre>
+<pre><code># A tibble: 41 × 6
+    Year Ppp           PtS Taylor_Attend Taylor_Outcome_Y1 Taylorless_Outcome_Y0
+   &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;                     &lt;dbl&gt;                 &lt;dbl&gt;
+ 1  2023 Detroit Li…    20 no                         21.5                  20  
+ 2  2023 Jacksonvil…    17 no                         20.7                  17  
+ 3  2023 Chicago Be…    41 yes                        41                    36.0
+ 4  2023 New York J…    23 yes                        23                    25.3
+ 5  2023 Minnesota …    27 no                         19.2                  27  
+ 6  2023 Denver Bro…    19 yes                        19                    21.5
+ 7  2023 Los Angele…    31 yes                        31                    30.1
+ 8  2023 Denver Bro…     9 no                         20.7                   9  
+ 9  2023 Miami Dolp…    21 no                         17.0                  21  
+10  2023 Philadelph…    17 no                         25.4                  17  
+# ℹ 31 more rows</code></pre>
 </div>
 </div>
-<p>There is no clear pattern in our residual vs fitted graph, indicating our model is capturing our data correctly. We also have an rmse of 5.31 indicating on average, our model has an error of 5.56 points.</p>
-<p>Next we will predict the points scored of Taylorless games.</p>
+<p>Now we will compute <span class="math inline">\(\text{E}(ATT) = \text{E}\left[Y_i - \text{E}(Y_i^0) \, | \, X = 1\right]\)</span> and <span class="math inline">\(\text{E}(ATU) = \text{E}\left[\text{E}(Y_i^1) - Y_i \, | \, X = 0\right]\)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># augment is in the broom package, loaded with tidymodels</span></span>
-<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>kcc_predictions_taylorless <span class="ot">&lt;-</span> kcc_quadratic_fit <span class="sc">|&gt;</span></span>
-<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">augment</span>(</span>
-<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">new_data =</span> kcc_g_taylorless,</span>
-<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a>kcc_predictions_taylorless <span class="sc">|&gt;</span></span>
-<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(</span>
-<span id="cb70-9"><a href="#cb70-9" aria-hidden="true" tabindex="-1"></a>    Year,</span>
-<span id="cb70-10"><a href="#cb70-10" aria-hidden="true" tabindex="-1"></a>    Ppp,</span>
-<span id="cb70-11"><a href="#cb70-11" aria-hidden="true" tabindex="-1"></a>    PtS,</span>
-<span id="cb70-12"><a href="#cb70-12" aria-hidden="true" tabindex="-1"></a>    .pred,</span>
-<span id="cb70-13"><a href="#cb70-13" aria-hidden="true" tabindex="-1"></a>    PtA,</span>
-<span id="cb70-14"><a href="#cb70-14" aria-hidden="true" tabindex="-1"></a>    TotYd,</span>
-<span id="cb70-15"><a href="#cb70-15" aria-hidden="true" tabindex="-1"></a>    PassY,</span>
-<span id="cb70-16"><a href="#cb70-16" aria-hidden="true" tabindex="-1"></a>    RushY,</span>
-<span id="cb70-17"><a href="#cb70-17" aria-hidden="true" tabindex="-1"></a>    TotYd_Alwd,</span>
-<span id="cb70-18"><a href="#cb70-18" aria-hidden="true" tabindex="-1"></a>    PassY_Alwd,</span>
-<span id="cb70-19"><a href="#cb70-19" aria-hidden="true" tabindex="-1"></a>    RushY_Alwd,</span>
-<span id="cb70-20"><a href="#cb70-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">everything</span>()</span>
-<span id="cb70-21"><a href="#cb70-21" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>E_ATT <span class="ot">&lt;-</span> <span class="fu">mean</span>(kcc_pred_taylor<span class="sc">$</span>PtS <span class="sc">-</span> kcc_pred_taylor<span class="sc">$</span>.pred)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>E_ATT</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 18 × 29
-    Year Ppp             PtS .pred   PtA TotYd PassY RushY TotYd_Alwd PassY_Alwd
-   &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;
- 1  2023 Detroit Lions    20  23.4    21   316   226    90        368        250
- 2  2023 Jacksonville…    17  26.3     9   399   298   101        271        197
- 3  2023 Minnesota Vi…    27  24.4    20   333   266    67        329        259
- 4  2023 Denver Bronc…     9  18.1    24   274   212    62        240         87
- 5  2023 Miami Dolphi…    21  20.3    14   267   174    93        292        175
- 6  2023 Philadelphia…    17  24.3    21   336   168   168        238        124
- 7  2023 Las Vegas Ra…    31  25.3    17   360   291    69        358        235
- 8  2023 Los Angeles …    13  21.7    12   268   145   123        353        235
- 9  2024 Atlanta Falc…    22  25.9    17   345   217   128        311        229
-10  2024 Los Angeles …    17  22.1    10   329   228   101        224        169
-11  2024 San Francisc…    28  26.3    18   329   145   184        310        209
-12  2024 Las Vegas Ra…    27  23.8    20   334   252    82        228        195
-13  2024 Buffalo Bills    21  22.4    30   259   181    78        366        262
-14  2024 Carolina Pan…    30  30.2    27   391   226   165        334        249
-15  2024 Los Angeles …    19  22.4    17   298   202    96        288        194
-16  2024 Cleveland Br…    21  21.7     7   311   179   132        266        127
-17  2024 Pittsburgh S…    29  24.4    10   389   320    69        364        162
-18  2024 Denver Bronc…     0  19.6    38    98    71    27        479        321
-# ℹ 19 more variables: RushY_Alwd &lt;dbl&gt;, .resid &lt;dbl&gt;, Week &lt;chr&gt;, Day &lt;chr&gt;,
-#   Date &lt;date&gt;, Time &lt;chr&gt;, Boxscore &lt;chr&gt;, Outcome &lt;chr&gt;, OT &lt;chr&gt;,
-#   Rec &lt;chr&gt;, Location &lt;chr&gt;, FirstD &lt;dbl&gt;, TO &lt;dbl&gt;, FirstD_Alwd &lt;dbl&gt;,
-#   TO_Alwd &lt;dbl&gt;, ExOff &lt;dbl&gt;, ExDef &lt;dbl&gt;, ExSpec &lt;dbl&gt;, Taylor_Attend &lt;chr&gt;</code></pre>
+<pre><code>[1] 0.1398794</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>E_ATU <span class="ot">&lt;-</span> <span class="fu">mean</span>(kcc_pred_taylorless<span class="sc">$</span>.pred <span class="sc">-</span> kcc_pred_taylorless<span class="sc">$</span>PtS)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>E_ATU</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2199924</code></pre>
 </div>
 </div>
-<p>Here is a graph of the residuals verses fit and the rsme value of Taylorless games.</p>
+<p>We will now determine the proportion of games Taylor attended and did not attend.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>kcc_predictions_taylorless <span class="sc">|&gt;</span></span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">residual =</span> PtS <span class="sc">-</span> .pred</span>
-<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> .pred, <span class="at">y =</span> residual)</span>
-<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb72-9"><a href="#cb72-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb72-10"><a href="#cb72-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb72-11"><a href="#cb72-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb72-12"><a href="#cb72-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Residuals vs. Fitted Values of Test Set"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="FinalProject_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rmse</span>(kcc_predictions_taylorless,</span>
-<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">truth =</span> PtS,</span>
-<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a> pi_treated <span class="ot">&lt;-</span> <span class="fu">sum</span>(kcc_disp<span class="sc">$</span>Taylor_Attend <span class="sc">==</span> <span class="st">"yes"</span>) <span class="sc">/</span> <span class="fu">nrow</span>(kcc_disp)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a> pi_treated</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 3
-  .metric .estimator .estimate
-  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
-1 rmse    standard        6.76</code></pre>
+<pre><code>[1] 0.5609756</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a> pi_untreated <span class="ot">&lt;-</span><span class="fu">sum</span>(kcc_disp<span class="sc">$</span>Taylor_Attend <span class="sc">==</span> <span class="st">"no"</span>) <span class="sc">/</span> <span class="fu">nrow</span>(kcc_disp)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a> pi_untreated</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.4390244</code></pre>
 </div>
 </div>
-<p>Similar as before, there is no clear pattern in our residual vs fitted graph, indicating our model is capturing our data correctly. We also have an rmse of 6.76 indicating on average, our model has an error of 6.76.</p>
-<p>The rsme is good to assess how well our model did in modeling absolute distance but we want to know whether the points scored was above or below our prediction, indicating a better or worse performance. We will calculate the Bias to determine this. Bias refers to the error that is introduced by approximating a real life problem. The main difference between Bias and Root Mean Square Error or Mean Squared Error is that the residuals (difference between predicted values and actual values) are not squared, therefore direction of the error is preserved.</p>
+<p>Now using the previous equation,</p>
 <p><span class="math display">\[
-\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} \left( \hat{y}_i - y_i \right)^2
+\text{E}(\text{ATE}) = \pi_{\text{treated}} \cdot \text{E}\left[Y_i - \text{E}(Y_i^0)\right] + \pi_{\text{untreated}} \cdot \text{E}\left[\text{E}(Y_i^1) - Y_i\right]
 \]</span></p>
-<p><span class="math display">\[
-\text{RMSE} = \sqrt{ \frac{1}{n} \sum_{i=1}^{n} \left( \hat{y}_i - y_i \right)^2 }
-\]</span></p>
-<p><span class="math display">\[
-\text{Bias} = \frac{1}{n} \sum_{i=1}^{n} \left( \hat{y}_i - y_i \right)
-\]</span></p>
+<p>we get an estimated ATE of:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>Taylor_Bias <span class="ot">&lt;-</span> <span class="sc">-</span>kcc_predictions_taylor<span class="sc">$</span>.resid <span class="sc">|&gt;</span> <span class="fu">mean</span>()</span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>Taylor_Bias </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>E_ATE <span class="ot">&lt;-</span> pi_treated <span class="sc">*</span> E_ATT <span class="sc">+</span> pi_untreated <span class="sc">*</span> E_ATU</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>E_ATE</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.472957</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>Taylorless_Bias <span class="ot">&lt;-</span> <span class="sc">-</span>kcc_predictions_taylorless<span class="sc">$</span>.resid <span class="sc">|&gt;</span> <span class="fu">mean</span>()</span>
-<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>Taylorless_Bias</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2.973193</code></pre>
+<pre><code>[1] 0.175051</code></pre>
 </div>
 </div>
-<p>As seen above, the bias for our Taylor mode is 1.47 while the bias for our Taylorless model is 2.97.</p>
+</section>
 <section id="insights" class="level2">
 <h2 class="anchored" data-anchor-id="insights">Insights</h2>
-<p>Our Taylor-attended model has a bias of 1.47, while the Taylor-less model has a bias of 2.97 with a difference of 1.500. Bias is calculated from the perspective of the model, meaning that a positive bias indicates the model is over predicting, while a negative bias would indicate under prediction. Smaller absolute values of bias suggest a better model fit. The larger positive bias in the Taylor-less model suggests that the model over predicted more frequently when Taylor Swift did not attend games.</p>
-<p>Since both models have positive bias values, this implies that the Chiefs tended to under perform in both scenarios. However, the higher bias in games without Taylor’s attendance indicates a greater average under performance in those games, relative to what the model predicted. This is an indication that the Chiefs tend to perform slightly better when Taylor Swift is present at their games.</p>
-<p>The average points score of Chiefs games from 2013 to 2024 is 26.85. This would mean that if Taylor’s attendance would theoretically have a 5.58% increase in score. This is a fairly significant advantage when observing Points scored as an indicator of offensive success. However, between 2013 and 2024, there are only 10 games where the Chiefs lost by 2 points or fewer—scenarios where a 1.5-point scoring advantage could conceivably have changed the outcome of the game.</p>
+<p>An Average Treatment Effect (ATE) of 0.175 suggests that Taylor Swift’s presence at Kansas City Chiefs games during the 2023–2024 seasons was associated with a 0.175-point increase in points scored by the team. However, this is not a statistically or practically significant effect. Out of all 41 games played across those two seasons, only one game was decided by a single point.</p>
+<p>That game represents the only scenario in which her estimated impact might have plausibly influenced the outcome. Even so, it is highly unlikely that her attendance alone would have been enough to change the result.</p>
+<p>A 0.175-point boost amounts to just a 0.77% increase over the Chiefs’ average score during the 2023 and 2024 seasons — a marginal effect. There are many other factors and strategies that could be pursued to increase scoring more effectively and meaningfully.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>Chief_Losses <span class="ot">&lt;-</span> kcc_g_test <span class="sc">|&gt;</span> </span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Outcome <span class="sc">==</span> <span class="st">"L"</span>, <span class="fu">abs</span>(PtA <span class="sc">-</span> PtS) <span class="sc">&lt;</span> <span class="dv">2</span>) </span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>Chief_Losses <span class="sc">|&gt;</span>  dplyr<span class="sc">::</span><span class="fu">select</span>(Year, Week, Ppp, PtS, PtA, Outcome, Taylor_Attend)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 7
+   Year Week  Ppp             PtS   PtA Outcome Taylor_Attend
+  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;        
+1  2023 1     Detroit Lions    20    21 L       no           </code></pre>
+</div>
+</div>
+<p>An Average Treatment Effect of .175 suggests that Taylor Swifts presence at Kansas City Chiefs games from 2023 to 2024 was responsible for a .175 increase in Points Scored by the Chiefs. This is not a statistically significant effect. In all 41 games of the Chief’s 2023 and 2024 seasons, only game came down to 1 point.</p>
+<p>In summary, the increase in performance attributed to Taylor Swift’s attendance is neither impactful nor actionable, and is unlikely to have meaningfully affected game outcomes.</p>
 <section id="limitations-and-future-work" class="level3">
 <h3 class="anchored" data-anchor-id="limitations-and-future-work">Limitations and Future Work</h3>
+<p>This study has several limitations that should be considered, along with opportunities for further research</p>
+<p>Firstly, there is only a small amount of data available to perform inference of Taylor Swifts impact on the Chiefs. While a sufficient amount is used to discover key variables (181 games from 2013 - 2022) in our LASSO model, there is only 41 games available in season 2023 and 2024. We are then forced to train our Causal Models on about half of the remaining data, which leads to inaccurate estimates for our prediction of expected ATE. Assuming their relationship progresses, a more accurate expected ATE will be accessible with around an additional 20 games to train our models on.</p>
+<p>Another concern arisies in the assumptions we make when determining the expected ATT and ATU. When deriving these values, we are assuming there are no other confounding variables contributing to the difference in predicted and actual points scored other than Taylor Swifts Attendance and some amount of irreducible error. This however is unlikely as there are likely multiple factors that contribute to the success of the Chiefs. Some of these factors may include weather, schedule, timezone, rivalries etc. Most of these factors are unmeasured by the available data set, therefore cannot contribute to t he accuracy of a future model.</p>
+<p>As stated earlier, our choice of points scored as a response variable indicating the success of the Chief’s offense is flawed. There are multiple factors that contribute to the Chiefs scoring more points that are not associated with the offense, such as opposing defensive strength. It is likely that the chiefs will score more points against teams with a weaker defense. In a future study I would like to explore reponse variables that measure Offensive performance relative to defensive strength. A variable reassuring difference between expected offensive points and actual offensive points would be a stronger response variable.</p>
+<p>Another issue with using points scored as a response variable is that it include points scored by the entire team. This includes pick sixes, fumble recoveries for touchdowns and safeties, and extra points. thus, points scored also partially measures the success of the defense and special teams. Using another data set that has strictly offensive points scored would solve this problem.</p>
 </section>
 <section id="reflection-optional-subsection" class="level3">
 <h3 class="anchored" data-anchor-id="reflection-optional-subsection">Reflection (Optional Subsection)</h3>
+<p>Holy moly I learned a ton about Causal Analysis. I think I learned about this at some point but definitely had to do lot of work to understand it. Well, I hope I understand it. I at least know enough to understand feedback or instructions on how to fix my analysis. I really enjoyed doing research to understand this topic. This independent study has caused me to (hopefully) understand this better than most things we wen over in class lol, except for Bon Feroni. That being said, I loved the diverse amount of topics we went over in class and I would love to apply these topics in a project like this in order to better understand them.</p>
+<p>Thanks so much Dr.&nbsp;Wynne for helping me understand these topics and answering all my questions. I really admire the way you seem to care about your student’s understanding and ability to think about problems and to understand solutions. HAGS.</p>
 
 
-</section>
 </section>
 </section>
 
