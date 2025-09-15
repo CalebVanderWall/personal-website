@@ -161,6 +161,10 @@ window.Quarto = {
     <a class="nav-link active" href="./FinalProject.html" aria-current="page"> 
 <span class="menu-text">Chiefs Data Project</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./magic_cube_generation.html"> 
+<span class="menu-text">Magic Cube Generation</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -682,7 +686,7 @@ New names:
 <pre><code># A tibble: 1 × 2
   penalty .config              
     &lt;dbl&gt; &lt;chr&gt;                
-1   0.356 Preprocessor1_Model20</code></pre>
+1   0.295 Preprocessor1_Model19</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>lasso_wflow_final <span class="ot">&lt;-</span> kcc_lasso_wflow <span class="sc">|&gt;</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">finalize_workflow</span>(<span class="at">parameters =</span> lasso_best) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -699,16 +703,16 @@ New names:
 <pre><code># A tibble: 10 × 3
    term        estimate penalty
    &lt;chr&gt;          &lt;dbl&gt;   &lt;dbl&gt;
- 1 (Intercept)   27.8     0.356
- 2 PtA            0       0.356
- 3 FirstD         0.707   0.356
- 4 TotYd          3.70    0.356
- 5 PassY          0       0.356
- 6 RushY          0.804   0.356
- 7 FirstD_Alwd    1.15    0.356
- 8 TotYd_Alwd     0       0.356
- 9 PassY_Alwd     0.521   0.356
-10 RushY_Alwd    -0.243   0.356</code></pre>
+ 1 (Intercept)   27.8     0.295
+ 2 PtA            0       0.295
+ 3 FirstD         0.733   0.295
+ 4 TotYd          3.71    0.295
+ 5 PassY          0       0.295
+ 6 RushY          0.848   0.295
+ 7 FirstD_Alwd    1.28    0.295
+ 8 TotYd_Alwd     0       0.295
+ 9 PassY_Alwd     0.481   0.295
+10 RushY_Alwd    -0.338   0.295</code></pre>
 </div>
 </div>
 <p>Here we can see that important variables include Points Allowed (PtA), First Down Count (FirstD), Total Yards (TotYd), total Rusing Yards (RushY), First Downs Allowed (FirstD_Alwd), Passing Yards Allowed (PassY_Alwd) and Rushing Yards Allowed (RushY_Alwd). We will proceed to use these variables in our following models.</p>
@@ -997,11 +1001,6 @@ Coefficients:
 <p>Another concern arisies in the assumptions we make when determining the expected ATT and ATU. When deriving these values, we are assuming there are no other confounding variables contributing to the difference in predicted and actual points scored other than Taylor Swifts Attendance and some amount of irreducible error. This however is unlikely as there are likely multiple factors that contribute to the success of the Chiefs. Some of these factors may include weather, schedule, timezone, rivalries etc. Most of these factors are unmeasured by the available data set, therefore cannot contribute to t he accuracy of a future model.</p>
 <p>As stated earlier, our choice of points scored as a response variable indicating the success of the Chief’s offense is flawed. There are multiple factors that contribute to the Chiefs scoring more points that are not associated with the offense, such as opposing defensive strength. It is likely that the chiefs will score more points against teams with a weaker defense. In a future study I would like to explore reponse variables that measure Offensive performance relative to defensive strength. A variable reassuring difference between expected offensive points and actual offensive points would be a stronger response variable.</p>
 <p>Another issue with using points scored as a response variable is that it include points scored by the entire team. This includes pick sixes, fumble recoveries for touchdowns and safeties, and extra points. thus, points scored also partially measures the success of the defense and special teams. Using another data set that has strictly offensive points scored would solve this problem.</p>
-</section>
-<section id="reflection-optional-subsection" class="level3">
-<h3 class="anchored" data-anchor-id="reflection-optional-subsection">Reflection (Optional Subsection)</h3>
-<p>Holy moly I learned a ton about Causal Analysis. I think I learned about this at some point but definitely had to do lot of work to understand it. Well, I hope I understand it. I at least know enough to understand feedback or instructions on how to fix my analysis. I really enjoyed doing research to understand this topic. This independent study has caused me to (hopefully) understand this better than most things we wen over in class lol, except for Bon Feroni. That being said, I loved the diverse amount of topics we went over in class and I would love to apply these topics in a project like this in order to better understand them.</p>
-<p>Thanks so much Dr.&nbsp;Wynne for helping me understand these topics and answering all my questions. I really admire the way you seem to care about your student’s understanding and ability to think about problems and to understand solutions. HAGS.</p>
 
 
 </section>

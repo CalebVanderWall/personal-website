@@ -58,7 +58,7 @@ library(dplyr)
 ```
 
 | Package | Use |
-|--------------------------------|----------------------------------------|
+|----|----|
 | [here](https://github.com/jennybc/here_here) | to easily load and save data |
 | [readr](https://readr.tidyverse.org/) | to import the CSV file data |
 | [dplyr](https://dplyr.tidyverse.org/) | to massage and summarize data |
@@ -688,17 +688,3 @@ Another issue with using points scored as a response variable is that it include
 This includes pick sixes, fumble recoveries for touchdowns and safeties, and extra points.
 thus, points scored also partially measures the success of the defense and special teams.
 Using another data set that has strictly offensive points scored would solve this problem.
-
-### Reflection (Optional Subsection)
-
-Holy moly I learned a ton about Causal Analysis.
-I think I learned about this at some point but definitely had to do lot of work to understand it.
-Well, I hope I understand it.
-I at least know enough to understand feedback or instructions on how to fix my analysis.
-I really enjoyed doing research to understand this topic.
-This independent study has caused me to (hopefully) understand this better than most things we wen over in class lol, except for Bon Feroni.
-That being said, I loved the diverse amount of topics we went over in class and I would love to apply these topics in a project like this in order to better understand them.
-
-Thanks so much Dr. Wynne for helping me understand these topics and answering all my questions.
-I really admire the way you seem to care about your student's understanding and ability to think about problems and to understand solutions.
-HAGS.

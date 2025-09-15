@@ -4,6 +4,7 @@ project:
   render: 
     - index.qmd
     - FinalProject.qmd
+    - magic_cube_generation.qmd
 
 website:
   title: "Home"
@@ -15,6 +16,8 @@ website:
         href: index.qmd
       - text: Chiefs Data Project
         href: FinalProject.qmd
+      - text: Magic Cube Generation
+        href: magic_cube_generation.qmd
       
 format:
   html:
