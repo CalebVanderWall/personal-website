@@ -4,7 +4,6 @@ project:
   render: 
     - index.qmd
     - FinalProject.qmd
-    - magic_cube_generation.qmd
 
 website:
   title: "Home"
