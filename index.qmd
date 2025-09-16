@@ -10,7 +10,8 @@ about: # https://quarto.org/docs/websites/website-about.html
       text: Github
       href: https://github.com/CalebVanderWall
     - icon: linkedin
-      href: https://linkedin.com
+      text: Linkedin
+      href: www.linkedin.com/in/caleb-vander-wall-6687902b7
 ---
 
 An aspiring Data Scientist looking for an entry level data analysis or data science position.

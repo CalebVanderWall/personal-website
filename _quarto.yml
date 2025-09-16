@@ -6,12 +6,12 @@ project:
     - FinalProject.qmd
 
 website:
-  title: "Home"
+  title: "Caleb Vander Wall"
   open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
   page-footer: "Made with ❤️ and Quarto"
   navbar:
     right:
-      - text: Home
+      - text: Resume
         href: index.qmd
       - text: Chiefs Data Project
         href: FinalProject.qmd
