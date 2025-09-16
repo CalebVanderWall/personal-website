@@ -1,6 +1,0 @@
----
-title: "Magic Cube Generation"
-editor: visual
----
-
-## heading
