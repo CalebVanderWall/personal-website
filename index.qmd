@@ -13,14 +13,16 @@ about: # https://quarto.org/docs/websites/website-about.html
       href: https://linkedin.com
 ---
 
-A little bit about me and my life.
+An aspiring Data Scientist looking for an entry level data analysis or data science position.
 
 ## Education
 
-Santiago Canyon College \| Orange \| September 2018 - March 2020
+Santiago Canyon College \| Orange \| 2018 - 2020
 
-California State University Fullerton \| Fullerton \| September 2023 - Present
+California State University Fullerton \| Fullerton \| 2023 - Present
 
 ## Experience
 
-Workplace \| Job title \| April 20XX - present
+Calvary Church Santa Ana \| Worship Resident \| June 2022 - present
+
+Vans \| Sales Associate \| July 2018 - March 2020

@@ -16,8 +16,6 @@ website:
         href: index.qmd
       - text: Chiefs Data Project
         href: FinalProject.qmd
-      - text: Magic Cube Generation
-        href: magic_cube_generation.qmd
       
 format:
   html:
