@@ -11,13 +11,14 @@ website:
   page-footer: "Made with ❤️ and Quarto"
   navbar:
     right:
-      - text: Resume
+      - text: C.V.
         href: index.qmd
       - text: Chiefs Data Project
         href: FinalProject.qmd
       
 format:
   html:
+    
     backgroundcolor: "#FFFFFF"
     mainfont: "helvetica"
     theme: [cosmo, styles.scss]
