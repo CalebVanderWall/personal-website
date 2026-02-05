@@ -2,11 +2,14 @@
 title: "Calvary Membership Data Project"
 editor: visual
 ---
+
 ## Project Walkthrough
 
-This video provides a brief walkthrough of a Power BI dashboard analyzing membership data quality and engagement trends.  
+This video provides a brief walkthrough of a Power BI dashboard analyzing membership data quality and engagement trends.\
 Due to data sensitivity, the dashboard is demonstrated via recorded walkthrough rather than public deployment.
 
 <video controls width="100%">
-  <source src="videos/ccmp.mp4" type="video/mp4">
+
+<source src="videos/ccmp.mp4" type="video/mp4">
+
 </video>
