@@ -10,6 +10,6 @@ Due to data sensitivity, the dashboard is demonstrated via recorded walkthrough 
 
 <video controls width="100%">
 
-<source src="videos/ccmp.mp4" type="video/mp4">
+<source src="videos/ccmp2.mp4" type="video/mp4">
 
 </video>
