@@ -35,6 +35,6 @@ An aspiring Data Scientist looking for an entry level data analysis or data scie
 This project explores the “Taylor Swift effect” on the Kansas City Chiefs' performance by estimating the causal impact of her game attendance on points scored. Using counter factual predictions and treatment effect estimators (ATE, ATT, ATU), the analysis finds only weak evidence of a slight increase in team scoring associated with her presence.
 
 
-**Calavary Church of Santa Ana Membership Data** \| Data Analysis/Visualization \| Microsoft Power BI \|2025
+**Calvary Church of Santa Ana Membership Data** \| Data Analysis/Visualization \| Microsoft Power BI \|2025
 
 This project analyzes membership data from a church organization to identify trends in data quality and member engagement. Dashboards were developed in Power BI using Power Query and DAX to clean, model, and visualize the data. The analysis was conducted at the request of the organization to support improved reporting accuracy and more effective engagement strategies.
