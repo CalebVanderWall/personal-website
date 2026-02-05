@@ -161,6 +161,10 @@ window.Quarto = {
     <a class="nav-link active" href="./FinalProject.html" aria-current="page"> 
 <span class="menu-text">Chiefs Data Project</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./calvary_mem_proj.qmd"> 
+<span class="menu-text">Calvary Church Membership Project</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -682,7 +686,7 @@ New names:
 <pre><code># A tibble: 1 × 2
   penalty .config              
     &lt;dbl&gt; &lt;chr&gt;                
-1    0.01 Preprocessor1_Model01</code></pre>
+1  0.0121 Preprocessor1_Model02</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>lasso_wflow_final <span class="ot">&lt;-</span> kcc_lasso_wflow <span class="sc">|&gt;</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">finalize_workflow</span>(<span class="at">parameters =</span> lasso_best) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -699,16 +703,16 @@ New names:
 <pre><code># A tibble: 10 × 3
    term        estimate penalty
    &lt;chr&gt;          &lt;dbl&gt;   &lt;dbl&gt;
- 1 (Intercept)   27.8      0.01
- 2 PtA           -1.02     0.01
- 3 FirstD         1.12     0.01
- 4 TotYd          3.89     0.01
- 5 PassY          0        0.01
- 6 RushY          0.966    0.01
- 7 FirstD_Alwd    2.08     0.01
- 8 TotYd_Alwd     0        0.01
- 9 PassY_Alwd     0.813    0.01
-10 RushY_Alwd    -0.500    0.01</code></pre>
+ 1 (Intercept)   27.8    0.0121
+ 2 PtA           -1.01   0.0121
+ 3 FirstD         1.12   0.0121
+ 4 TotYd          3.89   0.0121
+ 5 PassY          0      0.0121
+ 6 RushY          0.965  0.0121
+ 7 FirstD_Alwd    2.08   0.0121
+ 8 TotYd_Alwd     0      0.0121
+ 9 PassY_Alwd     0.812  0.0121
+10 RushY_Alwd    -0.499  0.0121</code></pre>
 </div>
 </div>
 <p>Here we can see that important variables include Points Allowed (PtA), First Down Count (FirstD), Total Yards (TotYd), total Rusing Yards (RushY), First Downs Allowed (FirstD_Alwd), Passing Yards Allowed (PassY_Alwd) and Rushing Yards Allowed (RushY_Alwd). We will proceed to use these variables in our following models.</p>
