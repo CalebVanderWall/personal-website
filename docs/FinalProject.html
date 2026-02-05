@@ -686,7 +686,7 @@ New names:
 <pre><code># A tibble: 1 × 2
   penalty .config              
     &lt;dbl&gt; &lt;chr&gt;                
-1   0.244 Preprocessor1_Model18</code></pre>
+1    0.01 Preprocessor1_Model01</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>lasso_wflow_final <span class="ot">&lt;-</span> kcc_lasso_wflow <span class="sc">|&gt;</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">finalize_workflow</span>(<span class="at">parameters =</span> lasso_best) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -703,16 +703,16 @@ New names:
 <pre><code># A tibble: 10 × 3
    term        estimate penalty
    &lt;chr&gt;          &lt;dbl&gt;   &lt;dbl&gt;
- 1 (Intercept)  27.8      0.244
- 2 PtA          -0.0338   0.244
- 3 FirstD        0.763    0.244
- 4 TotYd         3.73     0.244
- 5 PassY         0        0.244
- 6 RushY         0.881    0.244
- 7 FirstD_Alwd   1.40     0.244
- 8 TotYd_Alwd    0        0.244
- 9 PassY_Alwd    0.465    0.244
-10 RushY_Alwd   -0.407    0.244</code></pre>
+ 1 (Intercept)   27.8      0.01
+ 2 PtA           -1.02     0.01
+ 3 FirstD         1.12     0.01
+ 4 TotYd          3.89     0.01
+ 5 PassY          0        0.01
+ 6 RushY          0.966    0.01
+ 7 FirstD_Alwd    2.08     0.01
+ 8 TotYd_Alwd     0        0.01
+ 9 PassY_Alwd     0.813    0.01
+10 RushY_Alwd    -0.500    0.01</code></pre>
 </div>
 </div>
 <p>Here we can see that important variables include Points Allowed (PtA), First Down Count (FirstD), Total Yards (TotYd), total Rusing Yards (RushY), First Downs Allowed (FirstD_Alwd), Passing Yards Allowed (PassY_Alwd) and Rushing Yards Allowed (RushY_Alwd). We will proceed to use these variables in our following models.</p>
