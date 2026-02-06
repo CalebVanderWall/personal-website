@@ -6,6 +6,9 @@ project:
     - FinalProject.qmd
     - calvary_mem_proj.qmd
 
+resources: 
+  - videos/ccmp2.mp4
+
 website:
   title: "Caleb Vander Wall"
   open-graph: true # https://quarto.org/docs/websites/website-tools.html#open-graph
