@@ -4,6 +4,7 @@ project:
   render: 
     - index.qmd
     - FinalProject.qmd
+    - calvary_mem_proj.qmd
 
 website:
   title: "Caleb Vander Wall"
