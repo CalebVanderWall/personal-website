@@ -17,7 +17,7 @@ website:
       - text: Chiefs Data Project
         href: FinalProject.qmd
       - text: Calvary Church Membership Project
-        href: calvary_mem_proj.qmd
+        href: calvary_mem_proj.html
       
 format:
   html:
