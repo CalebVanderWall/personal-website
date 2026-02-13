@@ -47,3 +47,7 @@ The algorithm incorporates multiple levels of conflict handling:
 -   Second-order fallback rule
 
 This layered design adds robustness and ensures the cube can be fully populated even when movement collisions occur.
+
+## Code
+
+https://github.com/CalebVanderWall/magic_cube_detector
