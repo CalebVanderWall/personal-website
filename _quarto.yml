@@ -23,6 +23,7 @@ website:
       - text: Calvary Church Membership Project
         href: calvary_mem_proj.html
       - text: MagicCubeProject
+        href: MagicCubeProject.qmd
 format:
   html:
     
