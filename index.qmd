@@ -14,11 +14,7 @@ about: # https://quarto.org/docs/websites/website-about.html
       href: https://www.linkedin.com/in/caleb-vander-wall-6687902b7/
 ---
 
-Mathematics graduate specializing in Probability and Statistics with strong foundations in Data Analysis, Machine Learning
-and Statistical modeling. Experienced in developing predictive models to extract data driven insights from complex real
-world data sets. Effective communicator, able to translate technical findings into actionable insights. Strong programming
-skills in R and Python, with solid proficiency in Microsoft Excel. Seeking an entry level position in Data Science, Analytics
-or related fields.
+Mathematics graduate specializing in Probability and Statistics with strong foundations in data analysis, machine learning, and statistical modeling. Experienced in building predictive models and extracting actionable insights from complex real-world datasets. Proficient in R, Python, and Excel, seeking an entry-level role in data science, analytics, or related fields.
 
 ## Education
 
