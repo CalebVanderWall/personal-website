@@ -3,8 +3,6 @@ title: "Magic Cube Project"
 editor: visual
 ---
 
-# Magic Cube Project
-
 ## Intro
 
 A **Magic Cube** is a collection of integers in an n x n x n pattern where the sum of each row, column, pillar and 4 main space diagnols sum to some to a "magic" constant. A **Magic Number** is defined as $$ 
@@ -50,4 +48,4 @@ This layered design adds robustness and ensures the cube can be fully populated 
 
 ## Code
 
-https://github.com/CalebVanderWall/magic_cube_detector
+[GitHub Repository](https://github.com/CalebVanderWall/magic_cube_detector)
