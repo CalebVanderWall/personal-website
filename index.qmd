@@ -14,7 +14,11 @@ about: # https://quarto.org/docs/websites/website-about.html
       href: https://www.linkedin.com/in/caleb-vander-wall-6687902b7/
 ---
 
-An aspiring Data Scientist looking for an entry level data analysis or data science position.
+Mathematics graduate specializing in Probability and Statistics with strong foundations in Data Analysis, Machine Learning
+and Statistical modeling. Experienced in developing predictive models to extract data driven insights from complex real
+world data sets. Effective communicator, able to translate technical findings into actionable insights. Strong programming
+skills in R and Python, with solid proficiency in Microsoft Excel. Seeking an entry level position in Data Science, Analytics
+or related fields.
 
 ## Education
 
@@ -38,3 +42,8 @@ This project explores the “Taylor Swift effect” on the Kansas City Chiefs' p
 **Calvary Church of Santa Ana Membership Data** \| Data Analysis/Visualization \| Microsoft Power BI \|2025
 
 This project analyzes membership data from a church organization to identify trends in data quality and member engagement. Dashboards were developed in Power BI using Power Query and DAX to clean, model, and visualize the data. The analysis was conducted at the request of the organization to support improved reporting accuracy and more effective engagement strategies.
+
+
+**Magic Cube Generator/Detector** \| Mathematics/Programming \| MATLAB \|2023
+
+This project involves generating and testing three-dimensional magic cubes using customizable movement algorithms. The program fills an n×n×n cube with sequential distinct integers, starting from a user-defined position and following specified directional movement rules. If a chosen position is already occupied, the algorithm applies primary and secondary conflict-resolution movements to determine the next placement. The cube uses wrap-around behavior at boundaries, similar to a 3D “Pac-Man” board, ensuring all positions remain within bounds. After construction, the function verifies whether the resulting cube is magic by checking if all rows, columns, and diagonals sum to the same constant.

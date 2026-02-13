@@ -1,0 +1,49 @@
+---
+title: "Magic Cube Project"
+editor: visual
+---
+
+# Magic Cube Project
+
+## Intro
+
+A **Magic Cube** is a collection of integers in an n x n x n pattern where the sum of each row, column, pillar and 4 main space diagnols sum to some to a "magic" constant. A **Magic Number** is defined as $$ 
+M(n) = \frac{n(n^3 + 1)}{2}.
+$$
+
+## Design
+
+I created a paramaterized movement algorithm in MATLAB that produces potential magic cubes. This algorithm starts at a chosen quardonant, moves according to a modular arithmetic within a cube and implements different levels of conflict resolution strategies.
+
+u,v,w - Standard movement algorithm These inputs determine the pattern of indexing algorithm. u - row movement (positive values move down) v - column movemnt (positive values move right) w - plane movement (positive values move through) EXAMPLE u=1, v=-1, w=3 From the previously indexed integer, the next position to place an integer would be up one down one row, left one place, and through 3 planes.
+
+x,y,z - Conflict movement If and when a selected position is occuplied, these inputs give an alternate pattern to select an indexed position from the last indexed integer.
+
+r,s,t - Secondary Conflict Movement After a conflict movement takes place, if the slected position is already occupied by an integer, these inputs give another alternate indexing movement from the last indexed integer.
+
+NOTE If an indexed position is outside of the boundries of the generated nxn cube, the algorithm will go to the opposite side of the row, column or plane and continue. Kind of as if this cube was a big 3D pacman board.
+
+## What Makes This Project Interesting (At Least To Me)
+
+### 🔹 Parameterized Algorithm Design
+
+Rather than constructing a single magic cube, this project develops a **generalized movement framework**.\
+The cube is populated using parameterized movement vectors, allowing different indexing patterns to be tested systematically.\
+This transforms the construction process into a flexible algorithmic model rather than a fixed recipe.
+
+### 🔹 Search Space Exploration
+
+Because the movement rules are parameterized, there are many possible combinations.\
+Only a small subset produce valid magic cubes.
+
+This turns the problem into a **combinatorial search problem** over movement vectors in ( \mathbb{Z}\_n\^3 ), where the goal is to identify structures that preserve the magic constant.
+
+### 🔹 Layered Conflict Resolution
+
+The algorithm incorporates multiple levels of conflict handling:
+
+-   Primary movement rule\
+-   First-order conflict correction\
+-   Second-order fallback rule
+
+This layered design adds robustness and ensures the cube can be fully populated even when movement collisions occur.

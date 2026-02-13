@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Caleb Vander Wall</title>
+<title>Magic Cube Project – Caleb Vander Wall</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -66,10 +67,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Caleb Vander Wall">
-<meta property="og:description" content="Student">
-<meta property="og:image" content="caleb2.png">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Magic Cube Project – Caleb Vander Wall">
 <meta property="og:site_name" content="Caleb Vander Wall">
 </head>
 
@@ -91,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">C.V.</span></a>
   </li>  
   <li class="nav-item">
@@ -120,55 +148,75 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="caleb2.png" class="about-image
-  rounded " style="width: 20em;">
+<main class="content" id="quarto-document-content">
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Caleb Vander Wall</h1>
-<p class="subtitle lead">Student</p>
+<h1 class="title">Magic Cube Project</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
+  
+
+
 </header>
-    <div class="about-links">
-  <a href="https://github.com/CalebVanderWall" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://www.linkedin.com/in/caleb-vander-wall-6687902b7/" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">Linkedin</span>
-  </a>
-</div>
-  </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
-<p>Mathematics graduate specializing in Probability and Statistics with strong foundations in Data Analysis, Machine Learning and Statistical modeling. Experienced in developing predictive models to extract data driven insights from complex real world data sets. Effective communicator, able to translate technical findings into actionable insights. Strong programming skills in R and Python, with solid proficiency in Microsoft Excel. Seeking an entry level position in Data Science, Analytics or related fields.</p>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
-<p><strong>Santiago Canyon College</strong> | Orange | 2018 - 2020</p>
-<p><strong>California State University</strong> Fullerton | Fullerton | 2023 - Present</p>
+
+
+<section id="magic-cube-project" class="level1">
+<h1>Magic Cube Project</h1>
+<section id="intro" class="level2">
+<h2 class="anchored" data-anchor-id="intro">Intro</h2>
+<p>A <strong>Magic Cube</strong> is a collection of integers in an n x n x n pattern where the sum of each row, column, pillar and 4 main space diagnols sum to some to a “magic” constant. A <strong>Magic Number</strong> is defined as <span class="math display">\[
+M(n) = \frac{n(n^3 + 1)}{2}.
+\]</span></p>
 </section>
-<section id="experience" class="level2">
-<h2 data-anchor-id="experience">Experience</h2>
-<p><strong>Calvary Church Santa Ana</strong> | Worship Resident | June 2022 - present</p>
-<p><strong>Vans</strong> | Sales Associate | July 2018 - March 2020</p>
+<section id="design" class="level2">
+<h2 class="anchored" data-anchor-id="design">Design</h2>
+<p>I created a paramaterized movement algorithm in MATLAB that produces potential magic cubes. This algorithm starts at a chosen quardonant, moves according to a modular arithmetic within a cube and implements different levels of conflict resolution strategies.</p>
+<p>u,v,w - Standard movement algorithm These inputs determine the pattern of indexing algorithm. u - row movement (positive values move down) v - column movemnt (positive values move right) w - plane movement (positive values move through) EXAMPLE u=1, v=-1, w=3 From the previously indexed integer, the next position to place an integer would be up one down one row, left one place, and through 3 planes.</p>
+<p>x,y,z - Conflict movement If and when a selected position is occuplied, these inputs give an alternate pattern to select an indexed position from the last indexed integer.</p>
+<p>r,s,t - Secondary Conflict Movement After a conflict movement takes place, if the slected position is already occupied by an integer, these inputs give another alternate indexing movement from the last indexed integer.</p>
+<p>NOTE If an indexed position is outside of the boundries of the generated nxn cube, the algorithm will go to the opposite side of the row, column or plane and continue. Kind of as if this cube was a big 3D pacman board.</p>
 </section>
-<section id="projects" class="level2">
-<h2 data-anchor-id="projects">Projects</h2>
-<p><strong>Taylor Swift’s Effect on Chiefs’ Performance</strong> | Causal Analysis | R | 2025</p>
-<p>This project explores the “Taylor Swift effect” on the Kansas City Chiefs’ performance by estimating the causal impact of her game attendance on points scored. Using counter factual predictions and treatment effect estimators (ATE, ATT, ATU), the analysis finds only weak evidence of a slight increase in team scoring associated with her presence.</p>
-<p><strong>Calvary Church of Santa Ana Membership Data</strong> | Data Analysis/Visualization | Microsoft Power BI |2025</p>
-<p>This project analyzes membership data from a church organization to identify trends in data quality and member engagement. Dashboards were developed in Power BI using Power Query and DAX to clean, model, and visualize the data. The analysis was conducted at the request of the organization to support improved reporting accuracy and more effective engagement strategies.</p>
-<p><strong>Magic Cube Generator/Detector</strong> | Mathematics/Programming | MATLAB |2023</p>
-<p>This project involves generating and testing three-dimensional magic cubes using customizable movement algorithms. The program fills an n×n×n cube with sequential distinct integers, starting from a user-defined position and following specified directional movement rules. If a chosen position is already occupied, the algorithm applies primary and secondary conflict-resolution movements to determine the next placement. The cube uses wrap-around behavior at boundaries, similar to a 3D “Pac-Man” board, ensuring all positions remain within bounds. After construction, the function verifies whether the resulting cube is magic by checking if all rows, columns, and diagonals sum to the same constant.</p>
+<section id="what-makes-this-project-interesting-at-least-to-me" class="level2">
+<h2 class="anchored" data-anchor-id="what-makes-this-project-interesting-at-least-to-me">What Makes This Project Interesting (At Least To Me)</h2>
+<section id="parameterized-algorithm-design" class="level3">
+<h3 class="anchored" data-anchor-id="parameterized-algorithm-design">🔹 Parameterized Algorithm Design</h3>
+<p>Rather than constructing a single magic cube, this project develops a <strong>generalized movement framework</strong>.<br>
+The cube is populated using parameterized movement vectors, allowing different indexing patterns to be tested systematically.<br>
+This transforms the construction process into a flexible algorithmic model rather than a fixed recipe.</p>
+</section>
+<section id="search-space-exploration" class="level3">
+<h3 class="anchored" data-anchor-id="search-space-exploration">🔹 Search Space Exploration</h3>
+<p>Because the movement rules are parameterized, there are many possible combinations.<br>
+Only a small subset produce valid magic cubes.</p>
+<p>This turns the problem into a <strong>combinatorial search problem</strong> over movement vectors in ( _n^3 ), where the goal is to identify structures that preserve the magic constant.</p>
+</section>
+<section id="layered-conflict-resolution" class="level3">
+<h3 class="anchored" data-anchor-id="layered-conflict-resolution">🔹 Layered Conflict Resolution</h3>
+<p>The algorithm incorporates multiple levels of conflict handling:</p>
+<ul>
+<li>Primary movement rule<br>
+</li>
+<li>First-order conflict correction<br>
+</li>
+<li>Second-order fallback rule</li>
+</ul>
+<p>This layered design adds robustness and ensures the cube can be fully populated even when movement collisions occur.</p>
 
 
 </section>
-</main></div>
-</div>
- <!-- /main -->
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -189,6 +237,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
