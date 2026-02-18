@@ -17,14 +17,14 @@ This video is a walk through of a project I did for Calvary Church of Santa Ana 
 
 Some key information can be found in this data about Calvary's engagement with its congregation. The following insights and tools will help this church better care for and know its members.
 
-### Data Acquisition
+#### Data Acquisition
 
 A constant trend that can be seen in the data available is poor data acquisition. More than half of Calvary’s member records are missing five or more key attributes in their profile information. This information is crusial to understanding the needs of the congregation the church is serving. In order for proper analysis to take place, these bad data acquisition habits must end.
 
-### Email Retriever
+#### Email Retriever
 
 In order to solve some of this missing data probelem, I created a dashboard to retrieve missing information from Calvary's members. This tool produces a CSV of emails of members with select missing information. Using the church's mass email system, the user can then reach out to members with missing information.
 
-### Age Distribution
+#### Age Distribution
 
 The majority of Calvary’s age distribution falls between 5 and 20 years old, indicating that ministries serving children and youth should be a strategic priority, as these age groups represent the largest portion of the congregation. \
