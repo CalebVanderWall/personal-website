@@ -3,11 +3,6 @@ title: "Excel Personel Budget Project"
 editor: visual
 ---
 
----
-title: "Calvary Membership Data Project"
-editor: visual
----
-
 ## Project Walkthrough
 
 <video controls width="100%">
