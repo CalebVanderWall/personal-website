@@ -6,9 +6,11 @@ project:
     - FinalProject.qmd
     - calvary_mem_proj.qmd
     - MagicCubeProject.qmd
+    - excel_personel_budget_proj.qmd
 
 resources: 
   - videos/ccmp2.mp4
+  - videos/ebp.mp4
 
 website:
   title: "Caleb Vander Wall"
@@ -24,6 +26,8 @@ website:
         href: calvary_mem_proj.html
       - text: Magic Cube Project
         href: MagicCubeProject.qmd
+      - text: Personel Budget in Excel
+        href: excel_personel_budget_proj.qmd
 format:
   html:
     
