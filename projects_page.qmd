@@ -1,0 +1,36 @@
+---
+title: "Projects"
+editor: visual
+---
+
+Below are some of the projects I've worked on.
+
+### Chiefs Data Project
+
+![](pictures/taylor.jpg){width="300px"}
+
+This project explores the “Taylor Swift effect” on the Kansas City Chiefs’ performance by estimating the causal impact of her game attendance on points scored. Using counter factual predictions and treatment effect estimators (ATE, ATT, ATU), the analysis finds only weak evidence of a slight increase in team scoring associated with her presence.
+
+[View Chiefs Data Project](FinalProject.qmd)
+
+### Calvary Church Membership Project
+
+![](pictures/ccsa.jpg){width="300px"}
+
+This project analyzes membership data from a church organization to identify trends in data quality and member engagement. Dashboards were developed in Power BI using Power Query and DAX to clean, model, and visualize the data. The analysis was conducted at the request of the organization to support improved reporting accuracy and more effective engagement strategies.
+
+[View Calvary Church Membership Project](calvary_mem_proj.html)
+
+### Magic Cube Project
+
+![](pictures/magic_cube_2.png){width="300px"}
+
+This project involves generating and testing three-dimensional magic cubes using customizable movement algorithms. The program fills an n×n×n cube with sequential distinct integers, starting from a user-defined position and following specified directional movement rules. If a chosen position is already occupied, the algorithm applies primary and secondary conflict-resolution movements to determine the next placement. The cube uses wrap-around behavior at boundaries, similar to a 3D “Pac-Man” board, ensuring all positions remain within bounds. After construction, the function verifies whether the resulting cube is magic by checking if all rows, columns, and diagonals sum to the same constant.
+
+[View Project](MagicCubeProject.qmd)
+
+### Monthly Budget Template Excel
+
+![](pictures/excel.jpg){width="300px"}
+
+[View Monthly Budget Template](excel_personel_budget_proj.qmd)

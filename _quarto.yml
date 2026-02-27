@@ -7,6 +7,7 @@ project:
     - calvary_mem_proj.qmd
     - MagicCubeProject.qmd
     - excel_personel_budget_proj.qmd
+    - projects_page.qmd
 
 resources: 
   - videos/ccmp2.mp4
@@ -20,14 +21,8 @@ website:
     right:
       - text: C.V.
         href: index.qmd
-      - text: Chiefs Data Project
-        href: FinalProject.qmd
-      - text: Calvary Church Membership Project
-        href: calvary_mem_proj.html
-      - text: Magic Cube Project
-        href: MagicCubeProject.qmd
-      - text: Personel Budget in Excel
-        href: excel_personel_budget_proj.qmd
+      - text: Projects
+        href: projects_page.qmd
 format:
   html:
     
